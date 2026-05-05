@@ -8,9 +8,8 @@
     <meta name="keywords" content="контакты, Telegram, VK, почта, телефон, Kda2210, связь">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kda2210.github.io/">
-    <!-- Альтернативные языковые версии -->
-    <link rel="alternate" hreflang="ru" href="https://kda2210.github.io/?lang=ru">
-    <link rel="alternate" hreflang="en" href="https://kda2210.github.io/?lang=en">
+    <link rel="alternate" hreflang="ru" href="https://kda2210.github.io/">
+    <link rel="alternate" hreflang="en" href="https://kda2210.github.io/">
     <link rel="alternate" hreflang="x-default" href="https://kda2210.github.io/">
 
     <!-- Фавикон и превью для соцсетей -->
@@ -21,7 +20,6 @@
     <meta property="og:title" content="Kda2210">
     <meta property="og:description" content="Свяжитесь со мной удобным способом">
 
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -48,14 +46,12 @@
             text-align: center;
         }
 
-        /* Все элементы изначально скрыты (кроме переключателя языка, он не участвует в fade) */
         .avatar, .bio, .link-btn, .divider {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        /* Класс loaded добавляет анимацию */
         .loaded .avatar,
         .loaded .bio,
         .loaded .link-btn,
@@ -64,14 +60,13 @@
             transform: translateY(0);
         }
 
-        /* Задержки для последовательного появления */
         .loaded .avatar           { transition-delay: 0.1s; }
         .loaded .bio              { transition-delay: 0.2s; }
-        .loaded .link-btn:nth-of-type(1) { transition-delay: 0.3s; } /* Telegram */
-        .loaded .link-btn:nth-of-type(2) { transition-delay: 0.35s; } /* Почта */
-        .loaded .link-btn:nth-of-type(3) { transition-delay: 0.4s; } /* VK */
+        .loaded .link-btn:nth-of-type(1) { transition-delay: 0.3s; }
+        .loaded .link-btn:nth-of-type(2) { transition-delay: 0.35s; }
+        .loaded .link-btn:nth-of-type(3) { transition-delay: 0.4s; }
         .loaded .divider          { transition-delay: 0.5s; }
-        .loaded .link-btn:nth-of-type(4) { transition-delay: 0.55s; } /* Звонок */
+        .loaded .link-btn:nth-of-type(4) { transition-delay: 0.55s; }
 
         .avatar {
             width: 100px;
@@ -87,6 +82,11 @@
             line-height: 1.5;
             margin-bottom: 30px;
             color: #ffffff;
+        }
+
+        .bio i {
+            color: #54005c;
+            margin: 0 5px;
         }
 
         .link-btn {
@@ -145,7 +145,6 @@
             font-size: 20px;
         }
 
-        /* Переключатель языка */
         .lang-switch {
             margin-top: 25px;
             display: flex;
@@ -179,7 +178,7 @@
     <div class="container" id="main-container">
         <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799" alt="Аватар">
 
-        <p class="bio" id="bio-text">Выбирай удобный способ связи. Буду ждать 🙂</p>
+        <p class="bio" id="bio-text">Выбирай удобный способ связи. Буду ждать <i class="fa-regular fa-face-smile"></i></p>
 
         <a href="https://t.me/k_d_a_1_3_7" class="link-btn tg" target="_blank" rel="noopener" data-i18n="tg">
             <i class="fa-brands fa-telegram"></i> <span class="btn-text">Написать в Telegram</span>
@@ -199,7 +198,6 @@
             <i class="fa-solid fa-phone"></i> <span class="btn-text">Позвонить</span>
         </a>
 
-        <!-- Переключатель языка -->
         <div class="lang-switch">
             <button class="lang-btn active" data-lang="ru">🇷🇺 RU</button>
             <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
@@ -208,17 +206,16 @@
 
     <script>
     (function() {
-        // Объекты переводов
         const translations = {
             ru: {
-                bio: "Выбирай удобный способ связи. Буду ждать 🙂",
+                bio: 'Выбирай удобный способ связи. Буду ждать <i class="fa-regular fa-face-smile"></i>',
                 tg:   "Написать в Telegram",
                 email: "Написать на почту",
                 vk:   "Написать ВКонтакте",
                 phone: "Позвонить"
             },
             en: {
-                bio: "Choose a convenient way to contact me. Looking forward 🙂",
+                bio: 'Choose a convenient way to contact me. Looking forward <i class="fa-regular fa-face-smile"></i>',
                 tg:   "Write in Telegram",
                 email: "Write an email",
                 vk:   "Write in VK",
@@ -230,68 +227,44 @@
         const container = document.getElementById('main-container');
         const bioEl = document.getElementById('bio-text');
         const langButtons = document.querySelectorAll('.lang-btn');
-        const btnTextSpans = document.querySelectorAll('.btn-text'); // подписи в кнопках
-        const translatableLinks = document.querySelectorAll('[data-i18n]'); // ссылки с data-i18n
+        const translatableLinks = document.querySelectorAll('[data-i18n]');
 
-        // Определяем язык
         function getLang() {
-            // 1. Проверяем параметр ?lang=
-            const params = new URLSearchParams(window.location.search);
-            const urlLang = params.get('lang');
-            if (urlLang && (urlLang === 'ru' || urlLang === 'en')) {
-                return urlLang;
-            }
-            // 2. Проверяем сохранённый выбор
+            // 1. Сохранённый выбор
             const stored = localStorage.getItem('lang');
             if (stored && (stored === 'ru' || stored === 'en')) {
                 return stored;
             }
-            // 3. Язык браузера (первые два символа)
+            // 2. Язык браузера
             const browserLang = navigator.language.slice(0, 2);
             if (browserLang === 'ru') return 'ru';
-            // По умолчанию — русский
+            // По умолчанию русский
             return 'ru';
         }
 
         function applyLanguage(lang) {
-            // Устанавливаем атрибут lang у html
             htmlRoot.setAttribute('lang', lang);
 
-            // Обновляем активную кнопку
             langButtons.forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', btn.dataset.lang === lang);
             });
 
-            // Меняем тексты в элементах
             const t = translations[lang];
-            if (bioEl) bioEl.textContent = t.bio;
+            if (bioEl) bioEl.innerHTML = t.bio;
 
-            // Обновляем текст внутри каждой ссылки с data-i18n
             translatableLinks.forEach(link => {
                 const key = link.dataset.i18n;
                 if (t[key]) {
-                    // Находим span с классом btn-text внутри ссылки
                     const span = link.querySelector('.btn-text');
                     if (span) span.textContent = t[key];
                 }
             });
 
-            // Обновляем параметр URL без перезагрузки (для SEO)
-            if (history.replaceState) {
-                const newUrl = new URL(window.location);
-                newUrl.searchParams.set('lang', lang);
-                history.replaceState(null, '', newUrl.toString());
-            }
-
-            // Сохраняем выбор
+            // Сохраняем выбор (больше не трогаем URL)
             localStorage.setItem('lang', lang);
         }
 
-        // Инициализация языка
+        // Инициализация
         const currentLang = getLang();
         applyLanguage(currentLang);
 
@@ -305,9 +278,8 @@
             });
         });
 
-        // Запускаем плавное появление после загрузки страницы
+        // Плавное появление после загрузки
         window.addEventListener('load', function() {
-            // Даём небольшую задержку, чтобы гарантированно сработало
             setTimeout(function() {
                 container.classList.add('loaded');
             }, 50);
