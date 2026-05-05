@@ -1,1 +1,140 @@
-Привет, мир!
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kda2210</title>
+
+    <!-- Фавикон и превью для соцсетей (как в оригинале) -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799">
+    <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kda2210">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Тёмный фиолетовый фон. Если хотите фоновое изображение, раскомментируйте строки ниже
+               и замените ссылку на свою или ту же, что в теме Taplink (может не грузиться с чужих доменов) */
+            background-color: #18001a;
+            /* background-image: url('https://ru.x.taplink.st/s/i/themes/561023.jpg'); */
+            /* background-size: cover; */
+            /* background-position: 50% 0%; */
+            /* background-blend-mode: overlay; */
+            /* background-color: rgba(24,0,26,0.86); Если картинка, то осветлите/затемните */
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Аватар */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #54005c;
+        }
+
+        /* Приветственный текст */
+        .bio {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        /* Кнопки-ссылки */
+        .link-btn {
+            display: block;
+            background: #54005c;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 40px;          /* сильное скругление, как в TapLink */
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #54005c;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .link-btn:hover {
+            background: #6b007a;
+            transform: scale(1.02);
+        }
+
+        /* Кнопка Telegram с анимацией «сердечко» (пульсация) */
+        .link-btn.tg {
+            animation: heartPulse 1.5s infinite;
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Разделитель со стрелочкой вниз (как в оригинале) */
+        .divider {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 10px;
+        }
+
+        .divider span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Аватар (та же картинка, что в Taplink) -->
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799" alt="Аватар">
+
+        <!-- Текст -->
+        <p class="bio">Выбирай удобный способ связи. Буду ждать 🙂</p>
+
+        <!-- Кнопки в том же порядке -->
+        <a href="https://t.me/k_d_a_1_3_7" class="link-btn tg" target="_blank" rel="noopener">💬 Написать в Telegram</a>
+        <a href="mailto:knyazev.fx@gmail.com" class="link-btn">📧 Написать на почту</a>
+        <a href="https://vk.com/k_d_a_1_3_7" class="link-btn" target="_blank" rel="noopener">🔵 Написать ВКонтакте</a>
+
+        <!-- Разделитель-шеврон -->
+        <div class="divider">
+            <span>⌄</span>
+        </div>
+
+        <!-- Кнопка звонка -->
+        <a href="tel:+79199330482" class="link-btn">📞 Позвонить</a>
+    </div>
+</body>
+</html>
