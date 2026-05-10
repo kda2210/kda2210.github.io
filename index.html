@@ -15,9 +15,9 @@
     <!-- Предварительное подключение к источнику аватара -->
     <link rel="preconnect" href="https://avatars.githubusercontent.com">
     
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799">
-    <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+    <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Kda2210">
     <meta property="og:description" content="Свяжитесь со мной удобным способом">
@@ -81,6 +81,16 @@
             object-fit: cover;
             margin-bottom: 20px;
             border: 3px solid #54005c;
+            background: #2a2a2a;
+        }
+
+        .avatar-error {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
         }
 
         .bio {
@@ -113,6 +123,25 @@
             height: 20px;
             fill: currentColor;
             flex-shrink: 0;
+        }
+
+        /* Реалистичная иконка ВК с градиентом */
+        .vk-icon-bg {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #0077FF 0%, #0055CC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 119, 255, 0.3);
+            flex-shrink: 0;
+        }
+
+        .vk-icon-bg svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
         }
 
         .link-btn:hover {
@@ -184,8 +213,8 @@
 </head>
 <body>
     <div class="container" id="main-container">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799" 
-             alt="Аватар" loading="lazy">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799?s=300" 
+             alt="Аватар" loading="eager" onerror="this.onerror=null; this.src=''; this.classList.add('avatar-error'); this.alt='👤';">
 
         <p class="bio" id="bio-text">Выбирай удобный способ связи. Буду ждать.</p>
 
@@ -198,7 +227,9 @@
             <span class="btn-text">Написать на почту</span>
         </a>
         <a href="https://vk.com/k_d_a_1_3_7" class="link-btn" target="_blank" rel="noopener" data-i18n="vk">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.073 2H8.937C5.107 2 2 5.107 2 8.937v6.125C2 18.893 5.107 22 8.937 22h6.136c3.83 0 6.927-3.107 6.927-6.938V8.937C22 5.107 18.893 2 15.073 2zM17.946 17.41c-.312.312-.677.468-1.093.468h-1.25c-.937 0-1.406-.468-1.875-1.406-.468-.937-1.093-1.406-1.562-1.406-.312 0-.468.156-.468.468v.938c0 .312-.156.468-.468.468h-2.5c-.937 0-1.406-.468-1.406-1.406V9.844c0-.937.468-1.406 1.406-1.406h2.5c.312 0 .468.156.468.468v2.188c0 .312.156.468.468.468.312 0 .625-.156.937-.468.312-.312.625-.781.937-1.406.312-.625.781-.937 1.406-.937h1.25c.937 0 1.406.468 1.406 1.406v3.281c0 .937-.468 1.406-1.406 1.406h-.625c-.312 0-.468.156-.468.468 0 .312.156.625.468.937.312.312.625.781.937 1.406.312.625.468 1.093.468 1.406 0 .312-.156.625-.468.937z"/></svg>
+            <div class="vk-icon-bg">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.073 2H8.937C5.107 2 2 5.107 2 8.937v6.125C2 18.893 5.107 22 8.937 22h6.136c3.83 0 6.927-3.107 6.927-6.938V8.937C22 5.107 18.893 2 15.073 2zM17.946 17.41c-.312.312-.677.468-1.093.468h-1.25c-.937 0-1.406-.468-1.875-1.406-.468-.937-1.093-1.406-1.562-1.406-.312 0-.468.156-.468.468v.938c0 .312-.156.468-.468.468h-2.5c-.937 0-1.406-.468-1.406-1.406V9.844c0-.937.468-1.406 1.406-1.406h2.5c.312 0 .468.156.468.468v2.188c0 .312.156.468.468.468.312 0 .625-.156.937-.468.312-.312.625-.781.937-1.406.312-.625.781-.937 1.406-.937h1.25c.937 0 1.406.468 1.406 1.406v3.281c0 .937-.468 1.406-1.406 1.406h-.625c-.312 0-.468.156-.468.468 0 .312.156.625.468.937.312.312.625.781.937 1.406.312.625.468 1.093.468 1.406 0 .312-.156.625-.468.937z"/></svg>
+            </div>
             <span class="btn-text">Написать ВКонтакте</span>
         </a>
 
