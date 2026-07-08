@@ -125,19 +125,30 @@
             border-radius: 14px;
             padding: 12px 16px;
             margin-bottom: 12px;
-            word-break: break-all;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 15px;
             border: 1px solid #ede0f5;
         }
 
-        .wallet-label {
+        .wallet-info {
             display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #3b0050;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .wallet-label {
             font-weight: 600;
+            color: #3b0050;
+            font-size: 15px;
             letter-spacing: 0.3px;
+        }
+
+        .wallet-address {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            color: #2d2d2d;
+            word-break: break-all;
+            line-height: 1.4;
         }
 
         .copy-btn {
@@ -153,6 +164,8 @@
             transition: background 0.2s;
             white-space: nowrap;
             letter-spacing: 0.2px;
+            flex-shrink: 0;
+            margin-left: 12px;
         }
 
         .copy-btn:hover {
@@ -165,7 +178,7 @@
             background: #e3d6ec;
         }
 
-        .email-note {
+        .email-note, .closing-note {
             margin-top: 12px;
             margin-bottom: 20px;
             text-align: center;
@@ -184,6 +197,10 @@
             font-weight: 600;
         }
 
+        .heart {
+            color: #54005c;
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 30px 22px;
@@ -194,7 +211,11 @@
             .wallet-item {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+            }
+            .copy-btn {
+                margin-left: 0;
+                margin-top: 8px;
+                align-self: flex-end;
             }
         }
     </style>
@@ -207,7 +228,8 @@
 
         <div class="principles">
             <div class="principle-title">Бесплатно</div>
-            <p>За использование моих приложений никогда не нужно платить. Полезные инструменты должны быть доступны независимо от финансовых возможностей пользователя.</p>
+            <p>За использование моих приложений никогда не нужно платить.</p>
+            <p><strong>Полезные инструменты должны быть доступны независимо от финансовых возможностей пользователя.</strong></p>
 
             <div class="principle-title">Без рекламы</div>
             <p>Реклама отвлекает, нарушает концентрацию и ухудшает пользовательский опыт. Я считаю, что приложение должно выполнять свою задачу, а не бороться за внимание пользователя.</p>
@@ -216,11 +238,21 @@
             <p>Подписка превращает даже простые инструменты в постоянный источник расходов. Если приложение решает задачу, оно должно делать это без ежемесячных платежей.</p>
 
             <div class="principle-title">Работает офлайн</div>
-            <p>Интернет есть далеко не всегда. Кроме того, многие пользователи не хотят передавать личные данные на удалённые серверы. Поэтому мои приложения проектируются так, чтобы все возможности были доступны полностью офлайн. Это быстрее, надёжнее и обеспечивает лучшую приватность.</p>
+            <p>Интернет есть далеко не всегда. Кроме того, многие пользователи не хотят передавать личные данные на удалённые серверы. Поэтому мои приложения проектируются так, чтобы все основные функции работали полностью офлайн.</p>
+            <p>Это означает:</p>
+            <ul>
+                <li>отсутствие зависимости от серверов;</li>
+                <li>более высокую скорость работы;</li>
+                <li>лучшую приватность;</li>
+                <li>возможность пользоваться приложением в любом месте.</li>
+            </ul>
         </div>
 
         <h2>Почему проекты становятся Open Source?</h2>
-        <p>Пока проект активно развивается, иногда приходится менять архитектуру, перерабатывать код и экспериментировать. Когда проект достигает поставленных целей и становится достаточно зрелым, его исходный код публикуется. Это позволяет:</p>
+        <p>Во время активной разработки архитектура проекта постоянно меняется. Публикация исходного кода на этом этапе сильно усложняет сопровождение: приходится поддерживать совместимость, отвечать на вопросы и учитывать внешние изменения.</p>
+        <p>Поэтому сначала проект проходит этап активного развития.</p>
+        <p>Когда он становится зрелым и достигает поставленных целей, исходный код публикуется под открытой лицензией.</p>
+        <p>Это позволяет:</p>
         <ul>
             <li>убедиться в отсутствии скрытых механизмов;</li>
             <li>использовать проект как основу для собственных разработок;</li>
@@ -231,11 +263,14 @@
 
         <h2>Почему я продолжаю создавать такие проекты?</h2>
         <p>Разработка подобных приложений занимает тысячи часов. Я продолжаю этим заниматься потому, что мне нравится создавать действительно полезные инструменты. Если мои проекты помогают людям, добровольная поддержка позволяет уделять разработке больше времени и создавать новые проекты.</p>
-        <p><strong>Поддержка ничего не открывает и не предоставляет никаких преимуществ.</strong> Это просто способ сказать:<br><em>Спасибо.</em></p>
+        <p><strong>Любая поддержка остаётся полностью добровольной.</strong> Она не открывает новые функции, не предоставляет преимуществ и никак не влияет на работу приложений. Это всего лишь способ сказать:</p>
+        <p><strong>Спасибо.</strong> <span class="heart">❤️</span></p>
+
+        <p>Если хотя бы одно из моих приложений оказалось для вас полезным, значит тысячи часов разработки были потрачены не зря. Спасибо, что пользуетесь моими проектами.</p>
 
         <div class="divider"></div>
 
-        <h2 style="text-align: center; color: #2d0033;">Поддержать разработку</h2>
+        <h2 style="text-align: center; color: #2d0033;">Добровольная поддержка</h2>
         <p>Если вы хотите помочь развитию существующих и будущих проектов, сделать это можно любым удобным способом.</p>
 
         <a href="https://pay.cloudtips.ru/p/b532cfa7" target="_blank" rel="noopener" class="support-btn">
@@ -243,21 +278,39 @@
         </a>
 
         <div class="email-note">
-            💬 CloudTips ограничен 5 000 ₽.<br> Хотите поддержать существенно больше? Просто напишите мне на почту,<br> и я пришлю реквизиты для перевода любой суммы.<br>
+            💬 CloudTips имеет ограничение по сумме перевода.<br>
+            Если ваша поддержка превышает этот лимит, напишите мне на электронную почту.<br>
+            Я предложу наиболее удобный способ перевода.<br>
             <a href="mailto:kda2210@duck.com">kda2210@duck.com</a>
         </div>
 
         <div class="wallet-item">
-            <span class="wallet-label">🇹🇷 USDT (TRC20)</span>
+            <div class="wallet-info">
+                <span class="wallet-label">🇹🇷 USDT (TRC20)</span>
+                <span class="wallet-address">TDqGB6c5D9odC7zp74hWfVvoE2MkWago1j</span>
+            </div>
             <button class="copy-btn" data-copy="TDqGB6c5D9odC7zp74hWfVvoE2MkWago1j">Скопировать</button>
         </div>
         <div class="wallet-item">
-            <span class="wallet-label">₿ BTC</span>
+            <div class="wallet-info">
+                <span class="wallet-label">₿ BTC</span>
+                <span class="wallet-address">bc1qaex0h3tdjjhq4a94m7z0gajugmmz9r3gf22uzv</span>
+            </div>
             <button class="copy-btn" data-copy="bc1qaex0h3tdjjhq4a94m7z0gajugmmz9r3gf22uzv">Скопировать</button>
         </div>
         <div class="wallet-item">
-            <span class="wallet-label">Ξ ETH</span>
+            <div class="wallet-info">
+                <span class="wallet-label">Ξ ETH</span>
+                <span class="wallet-address">0xAf0AeCF853325370936D68EbD99921dDa55fd3DC</span>
+            </div>
             <button class="copy-btn" data-copy="0xAf0AeCF853325370936D68EbD99921dDa55fd3DC">Скопировать</button>
+        </div>
+
+        <div class="closing-note">
+            Спасибо, что дочитали до конца.<br>
+            Независимо от того, решите ли вы поддержать мои проекты,<br>
+            я искренне благодарен каждому, кто ими пользуется.<br>
+            <span class="heart">❤️</span>
         </div>
     </div>
 
