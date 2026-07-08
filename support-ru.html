@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка разработки</title>
+    <meta name="description" content="Почему мои проекты устроены именно так и как можно поддержать разработку.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+    <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
+    <meta property="og:title" content="Поддержка разработки">
+    <meta property="og:description" content="Почему мои проекты устроены именно так и как можно поддержать разработку.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgba(24, 0, 26, 0.7), rgba(24, 0, 26, 0.7)), url('fioletovyj.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(6px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            text-align: center;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #e6c3ff;
+            font-weight: 500;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #b380ff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: 0;
+        }
+
+        .principles {
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .principle-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .support-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #54005c;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 40px;
+            margin: 16px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid #54005c;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .support-btn:hover {
+            background: #6b007a;
+            transform: scale(1.02);
+        }
+
+        .wallet-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .wallet-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #cba6f7;
+            font-weight: 500;
+        }
+
+        .copy-btn {
+            background: #54005c;
+            border: none;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background: #6b007a;
+        }
+
+        .divider {
+            margin: 30px 0 10px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Почему мои проекты устроены именно так?</h1>
+        
+        <p>Я убеждён, что полезное программное обеспечение должно оставаться доступным каждому. Именно поэтому все мои приложения придерживаются нескольких принципов.</p>
+
+        <div class="principles">
+            <div class="principle-title">Бесплатно</div>
+            <p>За использование моих приложений никогда не нужно платить. Полезные инструменты должны быть доступны независимо от финансовых возможностей пользователя.</p>
+
+            <div class="principle-title">Без рекламы</div>
+            <p>Реклама отвлекает, нарушает концентрацию и ухудшает пользовательский опыт. Я считаю, что приложение должно выполнять свою задачу, а не бороться за внимание пользователя.</p>
+
+            <div class="principle-title">Без подписок</div>
+            <p>Подписка превращает даже простые инструменты в постоянный источник расходов. Если приложение решает задачу, оно должно делать это без ежемесячных платежей.</p>
+
+            <div class="principle-title">Работает офлайн</div>
+            <p>Интернет есть далеко не всегда. Кроме того, многие пользователи не хотят передавать личные данные на удалённые серверы. Поэтому мои приложения проектируются так, чтобы все возможности были доступны полностью офлайн. Это быстрее, надёжнее и обеспечивает лучшую приватность.</p>
+        </div>
+
+        <h2>Почему проекты становятся Open Source?</h2>
+        <p>Пока проект активно развивается, иногда приходится менять архитектуру, перерабатывать код и экспериментировать. Когда проект достигает поставленных целей и становится достаточно зрелым, его исходный код публикуется. Это позволяет:</p>
+        <ul>
+            <li>убедиться в отсутствии скрытых механизмов;</li>
+            <li>использовать проект как основу для собственных разработок;</li>
+            <li>сохранить приложение доступным даже спустя много лет;</li>
+            <li>дать возможность сообществу продолжить развитие проекта.</li>
+        </ul>
+        <p>Я считаю, что хорошие проекты должны принадлежать не только их автору, но и сообществу.</p>
+
+        <h2>Почему я продолжаю создавать такие проекты?</h2>
+        <p>Разработка подобных приложений занимает тысячи часов. Я продолжаю этим заниматься потому, что мне нравится создавать действительно полезные инструменты. Если мои проекты помогают людям, добровольная поддержка позволяет уделять разработке больше времени и создавать новые проекты.</p>
+        <p><strong>Поддержка ничего не открывает и не предоставляет никаких преимуществ.</strong> Это просто способ сказать:<br><em>Спасибо.</em></p>
+
+        <div class="divider"></div>
+
+        <h2 style="text-align: center;">Поддержать разработку</h2>
+        <p>Если вы хотите помочь развитию существующих и будущих проектов, сделать это можно любым удобным способом.</p>
+
+        <a href="https://pay.cloudtips.ru/p/b532cfa7" target="_blank" rel="noopener" class="support-btn">
+            💳 CloudTips
+        </a>
+
+        <div class="wallet-item">
+            <span class="wallet-label">🇹🇷 USDT (TRC20)</span>
+            <button class="copy-btn" data-copy="TDqGB6c5D9odC7zp74hWfVvoE2MkWago1j">Скопировать</button>
+        </div>
+        <div class="wallet-item">
+            <span class="wallet-label">₿ BTC</span>
+            <button class="copy-btn" data-copy="bc1qaex0h3tdjjhq4a94m7z0gajugmmz9r3gf22uzv">Скопировать</button>
+        </div>
+        <div class="wallet-item">
+            <span class="wallet-label">Ξ ETH</span>
+            <button class="copy-btn" data-copy="0xAf0AeCF853325370936D68EbD99921dDa55fd3DC">Скопировать</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const address = btn.getAttribute('data-copy');
+                navigator.clipboard.writeText(address).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Скопировано';
+                    btn.disabled = true;
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }, 2000);
+                }).catch(() => {
+                    alert('Не удалось скопировать адрес');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
