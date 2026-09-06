@@ -1,317 +1,308 @@
 <!DOCTYPE html>
 <html lang="ru" id="html-root">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Важно, что внутри.</title>
-    <meta name="description" content="Важно, что внутри.">
-    <meta name="keywords" content="Важно, что внутри.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://kda2210.github.io/">
-    <link rel="alternate" hreflang="ru" href="https://kda2210.github.io/">
-    <link rel="alternate" hreflang="en" href="https://kda2210.github.io/">
-    <link rel="alternate" hreflang="x-default" href="https://kda2210.github.io/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Важно, что внутри.</title>
+<meta name="description" content="Важно, что внутри.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#120417">
+<link rel="canonical" href="https://kda2210.github.io/">
+<link rel="alternate" hreflang="ru" href="https://kda2210.github.io/">
+<link rel="alternate" hreflang="en" href="https://kda2210.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://kda2210.github.io/">
 
-    <!-- Предварительное подключение к источнику аватара -->
-    <link rel="preconnect" href="https://avatars.githubusercontent.com">
-    
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
-    <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Kda2210">
-    <meta property="og:description" content="Важно, что внутри.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<link rel="preconnect" href="https://avatars.githubusercontent.com">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+<link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
 
-        body {
-            background: linear-gradient(rgba(24, 0, 26, 0.7), rgba(24, 0, 26, 0.7)), url('fioletovyj.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kda2210">
+<meta property="og:description" content="Важно, что внутри.">
+<meta name="twitter:card" content="summary">
 
-        .container {
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kda2210",
+  "url": "https://kda2210.github.io/",
+  "sameAs": ["https://vk.com/kda2210", "tg://resolve?domain=kda2210"]
+}
+</script>
 
-        /* Плавное появление */
-        .avatar, .bio, .link-btn, .divider {
-            opacity: 0;
-            transform: translateY(20px);
-        }
+<style>
+:root{
+  --void: #120417;
+  --plum: #54005c;
+  --plum-light: #c17ed6;
+  --mist: #f6eefa;
+  --mist-dim: rgba(246,238,250,.68);
+  --line: rgba(246,238,250,.16);
+}
 
-        @media (prefers-reduced-motion: no-preference) {
-            .avatar, .bio, .link-btn, .divider {
-                transition: opacity 0.6s ease, transform 0.6s ease;
-            }
-        }
+*{ margin:0; padding:0; box-sizing:border-box; }
 
-        .loaded .avatar,
-        .loaded .bio,
-        .loaded .link-btn,
-        .loaded .divider {
-            opacity: 1;
-            transform: translateY(0);
-        }
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:var(--mist);
+  background:
+    linear-gradient(rgba(18,4,23,.82), rgba(18,4,23,.88)),
+    url('fioletovyj.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-        .loaded .avatar           { transition-delay: 0.1s; }
-        .loaded .bio              { transition-delay: 0.2s; }
-        .loaded .link-btn:nth-of-type(1) { transition-delay: 0.3s; }
-        .loaded .link-btn:nth-of-type(2) { transition-delay: 0.35s; }
-        .loaded .link-btn:nth-of-type(3) { transition-delay: 0.4s; }
-        .loaded .divider          { transition-delay: 0.5s; }
-        .loaded .link-btn:nth-of-type(4) { transition-delay: 0.55s; }
+.container{ width:100%; max-width:380px; text-align:center; }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #54005c;
-            background: #2a2a2a;
-        }
+.hero, .actions{
+  opacity:0;
+  transform:translateY(16px);
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero, .actions{ transition: opacity .7s ease, transform .7s ease; }
+  .actions{ transition-delay:.15s; }
+}
+.loaded .hero, .loaded .actions{ opacity:1; transform:translateY(0); }
 
-        .avatar-error {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-        }
+.avatar-wrap{ position:relative; width:112px; height:112px; margin:0 auto 24px; }
+.avatar-wrap::before{
+  content:'';
+  position:absolute;
+  inset:-16px;
+  border-radius:50%;
+  background:conic-gradient(from 0deg, var(--plum), var(--plum-light), var(--plum));
+  filter:blur(20px);
+  opacity:.6;
+}
+@media (prefers-reduced-motion:no-preference){
+  .avatar-wrap::before{ animation: spin 9s linear infinite; }
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
 
-        .bio {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 30px;
-            color: #ffffff;
-            text-align: center;
-        }
+.avatar{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:112px; height:112px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--void);
+  background:#2a2a2a;
+}
+.avatar-error{
+  background: linear-gradient(135deg, var(--plum) 0%, #764ba2 100%);
+  display:flex; align-items:center; justify-content:center;
+  font-size:40px; color:#fff;
+}
 
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #54005c;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 15px 20px;
-            border-radius: 40px;
-            margin-bottom: 15px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #54005c;
-            transition: background 0.3s, transform 0.2s;
-            gap: 12px;
-        }
+.hero-title{
+  font-family:'Fraunces', Georgia, serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:26px;
+  line-height:1.3;
+  margin-bottom:10px;
+}
 
-        .link-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-            flex-shrink: 0;
-        }
+.hero-sub{
+  font-size:15px;
+  line-height:1.5;
+  color:var(--mist-dim);
+  margin-bottom:30px;
+}
 
-        .link-btn:hover {
-            background: #6b007a;
-            transform: scale(1.02);
-        }
+.link-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:transparent;
+  color:var(--mist);
+  text-decoration:none;
+  padding:14px 20px;
+  border-radius:40px;
+  margin-bottom:12px;
+  font-size:15px;
+  font-weight:600;
+  border:1px solid var(--line);
+  transition: background .25s ease, border-color .25s ease, transform .15s ease, box-shadow .25s ease;
+}
+.link-btn svg{ width:20px; height:20px; fill:currentColor; flex-shrink:0; }
 
-        /* Пульсация Telegram – 3 повтора, только если разрешено движение */
-        @media (prefers-reduced-motion: no-preference) {
-            .loaded .link-btn.tg {
-                animation: heartPulse 1.5s 3 forwards;
-            }
-        }
+.link-btn:hover{
+  background:var(--plum);
+  border-color:var(--plum);
+  box-shadow:0 10px 24px rgba(84,0,92,.45);
+}
+.link-btn:active{ transform:scale(.98); }
+.link-btn:focus-visible{ outline:2px solid var(--mist); outline-offset:3px; }
 
-        @keyframes heartPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
+.divider{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:var(--mist-dim);
+  font-size:13px;
+  margin:20px 0;
+}
+.divider::before, .divider::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:var(--line);
+}
 
-        .divider {
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.5);
-        }
+.lang-switch{
+  margin-top:28px;
+  display:inline-flex;
+  gap:2px;
+  padding:3px;
+  border:1px solid var(--line);
+  border-radius:999px;
+}
+.lang-btn{
+  background:transparent;
+  border:0;
+  color:var(--mist-dim);
+  padding:6px 16px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:600;
+  transition:.2s;
+}
+.lang-btn.active{ background:var(--plum); color:#fff; }
+.lang-btn:hover{ color:var(--mist); }
+.lang-btn:focus-visible{ outline:2px solid var(--mist); outline-offset:2px; }
 
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 0 10px;
-        }
-
-        .divider span {
-            font-size: 20px;
-        }
-
-        .lang-switch {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.3);
-            color: rgba(255,255,255,0.7);
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .lang-btn.active {
-            background: #54005c;
-            border-color: #54005c;
-            color: #fff;
-        }
-
-        .lang-btn:hover {
-            border-color: #fff;
-        }
-        /* Адаптация для мобильных */
-        @media (max-width: 480px) {
-            .link-btn {
-                gap: 16px;           /* больше пространства между иконкой и текстом */
-                padding: 12px 16px;  /* чуть компактнее, чтобы всё помещалось */
-                font-size: 15px;
-            }
-        }
-    </style>
+@media (max-width:480px){
+  .link-btn{ padding:12px 16px; font-size:14.5px; }
+  .hero-title{ font-size:23px; }
+}
+</style>
 </head>
 <body>
-    <div class="container" id="main-container">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799?s=300" 
-             alt="Аватар" loading="eager" onerror="this.onerror=null; this.src=''; this.classList.add('avatar-error'); this.alt='👤';">
+<div class="container" id="main-container">
 
-        <p class="bio" id="bio-text">Выбирай удобный способ связи.</p>
-
-        <a href="tg://resolve?domain=kda2210" class="link-btn tg" target="_blank" rel="noopener" data-i18n="tg">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.154-.056-.218s-.179-.043-.255-.026c-.108.025-1.838 1.165-5.184 3.421-.491.333-.937.497-1.336.488-.441-.01-1.288-.248-1.915-.453-.773-.252-1.384-.386-1.333-.82.028-.223.334-.451.918-.685 3.608-1.568 6.015-2.609 7.224-3.114 3.438-1.444 4.152-1.7 4.618-1.708.102-.002.33.024.478.144.124.101.159.237.175.338.017.099.036.322.02.499z"/></svg>
-            <span class="btn-text">Написать в Telegram</span>
-        </a>
-        <a href="mailto:kda2210@duck.com" class="link-btn" data-i18n="email">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <span class="btn-text">Написать на почту</span>
-        </a>
-        <a href="https://vk.com/kda2210" class="link-btn" target="_blank" rel="noopener" data-i18n="vk">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.98 16.2h-1.44c-.54 0-.705-.435-1.674-1.404-.843-.81-1.215-.918-1.422-.918-.288 0-.378.081-.378.477v1.287c0 .351-.108.558-1.026.558-1.521 0-3.204-.927-4.392-2.646C5.85 11.4 5.22 9.78 5.22 9.456c0-.18.063-.351.477-.351h1.44c.36 0 .495.162.639.549.702 2.034 1.89 3.816 2.376 3.816.18 0 .261-.081.261-.531v-2.106c-.054-.963-.567-1.044-.567-1.386 0-.171.135-.342.36-.342h2.268c.306 0 .423.171.423.549v2.835c0 .306.135.414.225.414.18 0 .333-.108.666-.441 1.035-1.152 1.773-2.925 1.773-2.925.099-.207.27-.432.639-.432h1.44c.432 0 .522.225.432.531-.171.792-1.845 3.177-1.845 3.177-.144.225-.198.333 0 .594.144.198.621.612.936.972.576.657 1.017 1.215 1.134 1.593.126.378-.081.558-.477.558z"/>
-            </svg>
-            <span class="btn-text">Написать ВКонтакте</span>
-        </a>
-
-        <div class="divider">
-            <span>⌄</span>
-        </div>
-
-        <a href="tel:+79199330482" class="link-btn" data-i18n="phone">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            <span class="btn-text">Позвонить</span>
-        </a>
-
-        <div class="lang-switch">
-            <button class="lang-btn active" data-lang="ru" type="button">🇷🇺 RU</button>
-            <button class="lang-btn" data-lang="en" type="button">🇬🇧 EN</button>
-        </div>
+  <div class="hero">
+    <div class="avatar-wrap">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/193797799?s=300"
+        alt="Аватар" loading="eager"
+        onerror="this.onerror=null; this.src=''; this.classList.add('avatar-error'); this.alt='👤';">
     </div>
+    <p class="hero-title" id="hero-title">Важно, что внутри.</p>
+    <p class="hero-sub" id="hero-sub">Выбирай удобный способ связи.</p>
+  </div>
 
-    <script>
-    (function() {
-        const translations = {
-            ru: {
-                bio: 'Выбирай удобный способ связи.',
-                tg:   "Написать в Telegram",
-                email: "Написать на почту",
-                vk:   "Написать ВКонтакте",
-                phone: "Позвонить"
-            },
-            en: {
-                bio: 'Choose a convenient way to contact me.',
-                tg:   "Write in Telegram",
-                email: "Write an email",
-                vk:   "Write in VK",
-                phone: "Call"
-            }
-        };
+  <div class="actions">
+    <a href="tg://resolve?domain=kda2210" class="link-btn" target="_blank" rel="noopener" data-i18n="tg">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.154-.056-.218s-.179-.043-.255-.026c-.108.025-1.838 1.165-5.184 3.421-.491.333-.937.497-1.336.488-.441-.01-1.288-.248-1.915-.453-.773-.252-1.384-.386-1.333-.82.028-.223.334-.451.918-.685 3.608-1.568 6.015-2.609 7.224-3.114 3.438-1.444 4.152-1.7 4.618-1.708.102-.002.33.024.478.144.124.101.159.237.175.338.017.099.036.322.02.499z"/></svg>
+      <span class="btn-text">Написать в Telegram</span>
+    </a>
 
-        const htmlRoot = document.getElementById('html-root');
-        const container = document.getElementById('main-container');
-        const bioEl = document.getElementById('bio-text');
-        const langButtons = document.querySelectorAll('.lang-btn');
-        const translatableLinks = document.querySelectorAll('[data-i18n]');
+    <a href="mailto:kda2210@duck.com" class="link-btn" data-i18n="email">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      <span class="btn-text">Написать на почту</span>
+    </a>
 
-        function getLang() {
-            const stored = localStorage.getItem('lang');
-            if (stored && (stored === 'ru' || stored === 'en')) {
-                return stored;
-            }
-            const browserLang = navigator.language.slice(0, 2);
-            if (browserLang === 'ru') return 'ru';
-            return 'ru';
-        }
+    <a href="https://vk.com/kda2210" class="link-btn" target="_blank" rel="noopener" data-i18n="vk">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.98 16.2h-1.44c-.54 0-.705-.435-1.674-1.404-.843-.81-1.215-.918-1.422-.918-.288 0-.378.081-.378.477v1.287c0 .351-.108.558-1.026.558-1.521 0-3.204-.927-4.392-2.646C5.85 11.4 5.22 9.78 5.22 9.456c0-.18.063-.351.477-.351h1.44c.36 0 .495.162.639.549.702 2.034 1.89 3.816 2.376 3.816.18 0 .261-.081.261-.531v-2.106c-.054-.963-.567-1.044-.567-1.386 0-.171.135-.342.36-.342h2.268c.306 0 .423.171.423.549v2.835c0 .306.135.414.225.414.18 0 .333-.108.666-.441 1.035-1.152 1.773-2.925 1.773-2.925.099-.207.27-.432.639-.432h1.44c.432 0 .522.225.432.531-.171.792-1.845 3.177-1.845 3.177-.144.225-.198.333 0 .594.144.198.621.612.936.972.576.657 1.017 1.215 1.134 1.593.126.378-.081.558-.477.558z"/></svg>
+      <span class="btn-text">Написать ВКонтакте</span>
+    </a>
 
-        function applyLanguage(lang) {
-            htmlRoot.setAttribute('lang', lang);
-            langButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === lang);
-            });
+    <div class="divider"><span id="divider-text">или</span></div>
 
-            const t = translations[lang];
-            if (bioEl) bioEl.textContent = t.bio;
-            translatableLinks.forEach(link => {
-                const key = link.dataset.i18n;
-                if (t[key]) {
-                    const span = link.querySelector('.btn-text');
-                    if (span) span.textContent = t[key];
-                }
-            });
-            localStorage.setItem('lang', lang);
-        }
+    <a href="tel:+79199330482" class="link-btn" data-i18n="phone">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span class="btn-text">Позвонить</span>
+    </a>
 
-        const currentLang = getLang();
-        applyLanguage(currentLang);
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ru" type="button">RU</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+  </div>
 
-        langButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const lang = this.dataset.lang;
-                if (lang !== htmlRoot.getAttribute('lang')) {
-                    applyLanguage(lang);
-                }
-            });
-        });
+</div>
 
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                container.classList.add('loaded');
-            }, 50);
-        });
-    })();
-    </script>
+<script>
+(function() {
+  const translations = {
+    ru: {
+      title: 'Важно, что внутри.',
+      sub: 'Выбирай удобный способ связи.',
+      divider: 'или',
+      tg: "Написать в Telegram",
+      email: "Написать на почту",
+      vk: "Написать ВКонтакте",
+      phone: "Позвонить"
+    },
+    en: {
+      title: 'What matters is what\u2019s inside.',
+      sub: 'Choose a convenient way to get in touch.',
+      divider: 'or',
+      tg: "Write in Telegram",
+      email: "Write an email",
+      vk: "Write in VK",
+      phone: "Call"
+    }
+  };
+
+  const htmlRoot = document.getElementById('html-root');
+  const container = document.getElementById('main-container');
+  const titleEl = document.getElementById('hero-title');
+  const subEl = document.getElementById('hero-sub');
+  const dividerEl = document.getElementById('divider-text');
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const translatableLinks = document.querySelectorAll('[data-i18n]');
+
+  function getLang() {
+    const stored = localStorage.getItem('lang');
+    if (stored === 'ru' || stored === 'en') return stored;
+    return 'ru';
+  }
+
+  function applyLanguage(lang) {
+    htmlRoot.setAttribute('lang', lang);
+    langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    const t = translations[lang];
+    if (titleEl) titleEl.textContent = t.title;
+    if (subEl) subEl.textContent = t.sub;
+    if (dividerEl) dividerEl.textContent = t.divider;
+    translatableLinks.forEach(link => {
+      const key = link.dataset.i18n;
+      const span = link.querySelector('.btn-text');
+      if (t[key] && span) span.textContent = t[key];
+    });
+    localStorage.setItem('lang', lang);
+  }
+
+  applyLanguage(getLang());
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const lang = this.dataset.lang;
+      if (lang !== htmlRoot.getAttribute('lang')) applyLanguage(lang);
+    });
+  });
+
+  window.addEventListener('load', function() {
+    setTimeout(function() { container.classList.add('loaded'); }, 50);
+  });
+})();
+</script>
 </body>
 </html>
