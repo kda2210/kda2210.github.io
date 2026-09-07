@@ -75,6 +75,23 @@ body{
   mix-blend-mode: screen;
 }
 
+.rainbow-overlay{
+  position:fixed; inset:0; pointer-events:none; z-index:4;
+  background: conic-gradient(from 0deg, #ff3d3d, #ff9d3d, #f6ff3d, #3dff6b, #3dc9ff, #7a3dff, #ff3dcf, #ff3d3d);
+  opacity:0;
+  mix-blend-mode: color;
+}
+.rainbow-overlay.active{
+  animation: rainbow-arc 7s ease-in-out 1;
+}
+@keyframes rainbow-arc{
+  0%{ opacity:0; transform:rotate(0deg) scale(1.3); }
+  15%{ opacity:.4; transform:rotate(160deg) scale(1.4); }
+  50%{ opacity:.45; transform:rotate(650deg) scale(1.6); }
+  85%{ opacity:.3; transform:rotate(1050deg) scale(1.4); }
+  100%{ opacity:0; transform:rotate(1200deg) scale(1.2); }
+}
+
 .container{ position:relative; z-index:1; width:100%; max-width:380px; text-align:center; }
 
 .hero, .actions{ opacity:0; transform:translateY(16px); }
@@ -120,6 +137,7 @@ body{
   font-size:40px; color:#fff;
 }
 
+/* Искры пасхалки на аватарке */
 .spark{
   position:absolute;
   top:50%; left:50%;
@@ -134,6 +152,53 @@ body{
 @keyframes spark-burst{
   to{ transform: translate(var(--dx), var(--dy)) scale(0); opacity:0; }
 }
+
+/* Пасхалка: 5 тапов по аватарке — всё ненадолго сходит с ума */
+@keyframes freakout-shake-arc{
+  0%{ transform:translate(0,0) rotate(0deg) scale(1); }
+  5%{ transform:translate(-2px,1px) rotate(-1deg) scale(1.005); }
+  10%{ transform:translate(3px,-2px) rotate(1deg) scale(0.995); }
+  15%{ transform:translate(-4px,3px) rotate(-2deg) scale(1.01); }
+  20%{ transform:translate(5px,-4px) rotate(2deg) scale(0.99); }
+  25%{ transform:translate(-7px,5px) rotate(-3deg) scale(1.015); }
+  30%{ transform:translate(8px,-6px) rotate(4deg) scale(0.985); }
+  35%{ transform:translate(-10px,7px) rotate(-4deg) scale(1.02); }
+  40%{ transform:translate(11px,-9px) rotate(5deg) scale(0.98); }
+  45%{ transform:translate(-12px,8px) rotate(-5deg) scale(1.02); }
+  50%{ transform:translate(12px,-10px) rotate(5deg) scale(0.98); }
+  55%{ transform:translate(-11px,9px) rotate(-5deg) scale(1.02); }
+  60%{ transform:translate(10px,-8px) rotate(4deg) scale(0.985); }
+  65%{ transform:translate(-9px,7px) rotate(-4deg) scale(1.015); }
+  70%{ transform:translate(8px,-6px) rotate(3deg) scale(0.99); }
+  75%{ transform:translate(-6px,5px) rotate(-2deg) scale(1.01); }
+  80%{ transform:translate(5px,-4px) rotate(2deg) scale(0.995); }
+  85%{ transform:translate(-3px,3px) rotate(-1deg) scale(1.005); }
+  90%{ transform:translate(2px,-2px) rotate(1deg) scale(0.998); }
+  95%{ transform:translate(-1px,1px) rotate(0deg) scale(1); }
+  100%{ transform:translate(0,0) rotate(0deg) scale(1); }
+}
+.container.freakout{ animation: freakout-shake-arc 7s ease-in-out 1; filter: url(#wavy-filter) saturate(1.3) contrast(1.08); }
+
+@keyframes freakout-avatar{
+  0%{ transform:scale(1) rotate(0deg) skew(0deg); filter:hue-rotate(0deg) saturate(1) contrast(1); }
+  20%{ transform:scale(1.2) rotate(-14deg) skew(4deg); filter:hue-rotate(70deg) saturate(2) contrast(1.3); }
+  40%{ transform:scale(0.82) rotate(16deg) skew(-5deg); filter:hue-rotate(150deg) saturate(2.4) contrast(1.4); }
+  60%{ transform:scale(1.15) rotate(-11deg) skew(5deg); filter:hue-rotate(230deg) saturate(2.2) contrast(1.3); }
+  80%{ transform:scale(0.88) rotate(13deg) skew(-4deg); filter:hue-rotate(300deg) saturate(1.8) contrast(1.2); }
+  100%{ transform:scale(1) rotate(0deg) skew(0deg); filter:hue-rotate(360deg) saturate(1) contrast(1); }
+}
+.avatar-wrap.freakout-avatar{ animation: freakout-avatar .4s ease-in-out infinite; }
+
+@keyframes text-glitch{
+  0%,100%{ text-shadow:none; transform:translate(0,0) skewX(0deg); }
+  15%{ text-shadow:-3px 0 #ff3d3d, 3px 0 #3dc9ff; transform:translate(-2px,0) skewX(3deg); }
+  30%{ text-shadow:3px 0 #f6ff3d, -3px 0 #7a3dff; transform:translate(2px,0) skewX(-3deg); }
+  45%{ text-shadow:-2px 0 #3dff6b, 2px 0 #ff3dcf; transform:translate(-1px,0) skewX(2deg); }
+  60%{ text-shadow:2px 0 #ff9d3d, -2px 0 #3dc9ff; transform:translate(1px,0) skewX(-2deg); }
+  75%{ text-shadow:-3px 0 #ff3dcf, 3px 0 #3dff6b; transform:translate(-2px,0) skewX(3deg); }
+  90%{ text-shadow:2px 0 #7a3dff, -2px 0 #f6ff3d; transform:translate(1px,0) skewX(-1deg); }
+}
+.hero-title.freakout-text{ animation: text-glitch .16s steps(1) infinite; }
 
 .hero-title, .hero-sub, #divider-text, .btn-text{ transition: opacity .18s ease; }
 
@@ -161,6 +226,7 @@ body{
 
 .hero-sub{ font-size:15px; line-height:1.5; color:var(--mist-dim); margin-bottom:30px; }
 
+/* Часы — отдельным виджетом в углу экрана, не в основном блоке */
 .clock-corner{
   position:fixed;
   top: calc(16px + env(safe-area-inset-top, 0px));
@@ -181,6 +247,7 @@ body{
 @media (prefers-reduced-motion:no-preference){ .clock-corner{ transition:opacity .5s ease .2s; } }
 .clock-corner.show{ opacity:1; }
 
+/* Кнопка "Сохранить контакт" — плавающая, отдельно от списка способов связи */
 .vcard-fab{
   position:fixed;
   right: calc(16px + env(safe-area-inset-right, 0px));
@@ -268,7 +335,19 @@ body{
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+  <filter id="wavy-filter" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="turb">
+      <animate attributeName="baseFrequency" values="0.012 0.018;0.024 0.03;0.008 0.014;0.02 0.026;0.012 0.018" dur="2.6s" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="turb" xChannelSelector="R" yChannelSelector="G">
+      <animate attributeName="scale" values="0;10;30;18;38;12;0" dur="3.4s" repeatCount="indefinite"/>
+    </feDisplacementMap>
+  </filter>
+</svg>
+
 <div class="spotlight" aria-hidden="true"></div>
+<div class="rainbow-overlay" id="rainbow-overlay" aria-hidden="true"></div>
 
 <div class="container" id="main-container">
 
@@ -330,10 +409,10 @@ body{
   const translations = {
     ru: { title:'Важно, что внутри.', sub:'Выбирай удобный способ связи.', divider:'или',
           tg:"Написать в Telegram", email:"Написать на почту", vk:"Написать ВКонтакте", phone:"Позвонить",
-          vcard:"Сохранить контакт", copied:"Скопировано", secret:"Нашёл(а) секрет ✨" },
+          vcard:"Сохранить контакт", copied:"Скопировано", secret:"Поймал(а) радужный портал 🌈✨" },
     en: { title:'What matters is what\u2019s inside.', sub:'Choose a convenient way to get in touch.', divider:'or',
           tg:"Write in Telegram", email:"Write an email", vk:"Write in VK", phone:"Call",
-          vcard:"Save contact", copied:"Copied", secret:"Found a secret ✨" }
+          vcard:"Save contact", copied:"Copied", secret:"Caught the rainbow portal 🌈✨" }
   };
 
   const htmlRoot = document.getElementById('html-root');
@@ -365,6 +444,7 @@ body{
     setTimeout(function() { el.textContent = text; el.style.opacity = 1; }, 180);
   }
 
+  // Часовой пояс — Екатеринбург
   const TIMEZONE = 'Asia/Yekaterinburg';
   function updateClock() {
     if (!clockEl) return;
@@ -421,6 +501,7 @@ body{
     toastEl._t = setTimeout(function() { toastEl.classList.remove('show'); }, 1800);
   }
 
+  // --- Сохранить контакт (vCard) ---
   const vcardBtn = document.getElementById('vcard-fab');
   if (vcardBtn) {
     const vcard =
@@ -431,6 +512,7 @@ body{
     vcardBtn.setAttribute('rel', 'noopener');
   }
 
+  // --- Копирование номера на компьютере вместо бесполезного tel: ---
   const phoneBtn = document.getElementById('phone-btn');
   if (phoneBtn && navigator.clipboard && window.matchMedia('(pointer: fine)').matches) {
     phoneBtn.addEventListener('click', function(e) {
@@ -441,6 +523,7 @@ body{
     });
   }
 
+  // --- Отклик на нажатие кнопок ---
   function addRipple(e, btn) {
     const rect = btn.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
@@ -458,34 +541,104 @@ body{
     btn.addEventListener('pointerdown', function(e) { addRipple(e, btn); });
   });
 
+  // --- Пасхалка: 5 быстрых тапов по аватарке = мини-истерика на весь экран ---
   const avatarWrap = document.getElementById('avatar-wrap');
+  const rainbowOverlay = document.getElementById('rainbow-overlay');
   let tapCount = 0, tapTimer = null;
+  let freaking = false, tiltPaused = false;
+
   function spawnSparks() {
     const count = 10;
     for (let i = 0; i < count; i++) {
       const angle = (Math.PI * 2 * i) / count + Math.random() * 0.3;
-      const dist = 50 + Math.random() * 30;
+      const dist = 60 + Math.random() * 45;
       const s = document.createElement('span');
       s.className = 'spark';
+      s.style.background = 'hsl(' + Math.floor(Math.random() * 360) + ',90%,65%)';
       s.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
       s.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
       avatarWrap.appendChild(s);
       setTimeout(function() { s.remove(); }, 950);
     }
   }
+
+  // Короткие синтезированные звуки — без файлов, генерируются на лету
+  let audioCtx = null;
+  function playTone(freqStart, freqEnd, duration, type, peakGain, delaySec) {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const t0 = audioCtx.currentTime + (delaySec || 0);
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type || 'sine';
+      osc.frequency.setValueAtTime(Math.max(freqStart, 1), t0);
+      osc.frequency.exponentialRampToValueAtTime(Math.max(freqEnd, 1), t0 + duration);
+      gain.gain.setValueAtTime(0.0001, t0);
+      gain.gain.exponentialRampToValueAtTime(peakGain, t0 + duration * 0.2);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duration);
+      osc.connect(gain).connect(audioCtx.destination);
+      osc.start(t0);
+      osc.stop(t0 + duration + 0.05);
+    } catch (e) { /* аудио недоступно — просто без звука */ }
+  }
+
+  function triggerFreakout() {
+    if (freaking) return;
+    freaking = true;
+
+    if (!allowMotion) {
+      freaking = false;
+      showToast(translations[currentLang].secret);
+      return;
+    }
+
+    tiltPaused = true;
+    avatarWrap.style.transform = '';
+    container.classList.add('freakout');
+    avatarWrap.classList.add('freakout-avatar');
+    titleEl.classList.add('freakout-text');
+    if (rainbowOverlay) rainbowOverlay.classList.add('active');
+    playTone(140, 820, 0.5, 'sawtooth', 0.05);
+
+    const sparkTimer = setInterval(spawnSparks, 140);
+    const spotTimer = setInterval(function() {
+      setSpot(Math.random() * 100, Math.random() * 100);
+    }, 60);
+
+    // Финальный всплеск перед тем, как всё уляжется
+    setTimeout(function() {
+      spawnSparks(); spawnSparks(); spawnSparks();
+      playTone(1500, 2400, 0.35, 'sine', 0.04);
+    }, 6300);
+
+    setTimeout(function() {
+      clearInterval(sparkTimer);
+      clearInterval(spotTimer);
+      container.classList.remove('freakout');
+      avatarWrap.classList.remove('freakout-avatar');
+      titleEl.classList.remove('freakout-text');
+      if (rainbowOverlay) rainbowOverlay.classList.remove('active');
+      tiltPaused = false;
+      freaking = false;
+      showToast(translations[currentLang].secret);
+    }, 7000);
+  }
+
   if (avatarWrap) {
     avatarWrap.addEventListener('click', function() {
+      if (freaking) return;
       tapCount++;
       clearTimeout(tapTimer);
       tapTimer = setTimeout(function() { tapCount = 0; }, 1200);
       if (tapCount >= 5) {
         tapCount = 0;
-        if (allowMotion) spawnSparks();
-        showToast(translations[currentLang].secret);
+        triggerFreakout();
       }
     });
   }
 
+  // --- "Фонарик": свет следует за курсором/пальцем, в покое медленно дрейфует ---
   const root = document.documentElement;
   function setSpot(xPct, yPct) {
     root.style.setProperty('--mx', xPct.toFixed(1) + '%');
@@ -519,6 +672,7 @@ body{
 
     if (avatarWrap && window.matchMedia('(pointer: fine)').matches) {
       avatarWrap.addEventListener('pointermove', function(e) {
+        if (tiltPaused) return;
         const rect = avatarWrap.getBoundingClientRect();
         const relX = (e.clientX - rect.left) / rect.width - 0.5;
         const relY = (e.clientY - rect.top) / rect.height - 0.5;
