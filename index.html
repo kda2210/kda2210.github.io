@@ -138,7 +138,6 @@ body{
   font-size:40px; color:#fff;
 }
 
-/* Искры пасхалки на аватарке */
 .spark{
   position:absolute;
   top:50%; left:50%;
@@ -154,7 +153,6 @@ body{
   to{ transform: translate(var(--dx), var(--dy)) scale(0); opacity:0; }
 }
 
-/* Пасхалка: 5 тапов по аватарке — всё ненадолго сходит с ума */
 @keyframes freakout-shake-arc{
   0%{ transform:translate(0,0) rotate(0deg) skew(0deg,0deg) scale(1); }
   5%{ transform:translate(-2px,1px) rotate(-1deg) skew(1deg,0.5deg) scale(1.005); }
@@ -227,7 +225,6 @@ body{
 
 .hero-sub{ font-size:15px; line-height:1.5; color:var(--mist-dim); margin-bottom:30px; }
 
-/* Часы — отдельным виджетом в углу экрана, не в основном блоке */
 .clock-corner{
   position:fixed;
   top: calc(16px + env(safe-area-inset-top, 0px));
@@ -248,30 +245,31 @@ body{
 @media (prefers-reduced-motion:no-preference){ .clock-corner{ transition:opacity .5s ease .2s; } }
 .clock-corner.show{ opacity:1; }
 
-/* Кнопка "Сохранить контакт" — плавающая, отдельно от списка способов связи */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
 .vcard-fab{
   position:fixed;
   right: calc(16px + env(safe-area-inset-right, 0px));
   bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   z-index:3;
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; justify-content:center;
+  width:52px; height:52px;
   background:var(--plum);
   color:#fff;
   text-decoration:none;
-  padding:12px 18px;
-  border-radius:999px;
-  font-size:14px;
-  font-weight:600;
+  border-radius:50%;
   border:1px solid var(--plum);
   box-shadow:0 10px 24px rgba(84,0,92,.45);
   transition: filter .2s ease, transform .15s ease, box-shadow .25s ease;
-  position:fixed;
   overflow:hidden;
   opacity:0;
   transform: translateY(8px) scale(.9);
   touch-action: manipulation;
 }
-.vcard-fab svg{ width:18px; height:18px; fill:currentColor; flex-shrink:0; }
+.vcard-fab svg{ width:22px; height:22px; fill:currentColor; flex-shrink:0; }
 .vcard-fab:hover{ filter:brightness(1.15); }
 .vcard-fab:active{ transform:scale(.96); }
 .vcard-fab:focus-visible{ outline:2px solid var(--mist); outline-offset:3px; }
@@ -390,8 +388,8 @@ body{
 </div>
 
 <a href="#" id="vcard-fab" class="vcard-fab" data-i18n="vcard">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM6 10V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-  <span class="btn-text">Сохранить контакт</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+  <span class="btn-text sr-only">Сохранить контакт</span>
 </a>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -436,14 +434,13 @@ body{
     setTimeout(function() { el.textContent = text; el.style.opacity = 1; }, 180);
   }
 
-  // Часовой пояс — Екатеринбург
   const TIMEZONE = 'Asia/Yekaterinburg';
   function updateClock() {
     if (!clockEl) return;
     try {
       const now = new Date();
       const time = new Intl.DateTimeFormat(currentLang === 'ru' ? 'ru-RU' : 'en-GB', {
-        hour: '2-digit', minute: '2-digit', hour12: false, timeZone: TIMEZONE
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: TIMEZONE
       }).format(now);
       clockEl.textContent = time;
       if (clockCorner) clockCorner.title = currentLang === 'ru' ? 'Время в Екатеринбурге' : 'Time in Yekaterinburg';
@@ -468,7 +465,7 @@ body{
   }
 
   applyLanguage(getLang(), true);
-  setInterval(updateClock, 30000);
+  setInterval(updateClock, 1000);
 
   langButtons.forEach(btn => {
     btn.addEventListener('click', function() {
@@ -493,7 +490,6 @@ body{
     toastEl._t = setTimeout(function() { toastEl.classList.remove('show'); }, 1800);
   }
 
-  // --- Сохранить контакт (vCard) ---
   const vcardBtn = document.getElementById('vcard-fab');
   if (vcardBtn) {
     const vcard =
@@ -504,7 +500,6 @@ body{
     vcardBtn.setAttribute('rel', 'noopener');
   }
 
-  // --- Копирование номера на компьютере вместо бесполезного tel: ---
   const phoneBtn = document.getElementById('phone-btn');
   if (phoneBtn && navigator.clipboard && window.matchMedia('(pointer: fine)').matches) {
     phoneBtn.addEventListener('click', function(e) {
@@ -515,7 +510,6 @@ body{
     });
   }
 
-  // --- Отклик на нажатие кнопок ---
   function addRipple(e, btn) {
     const rect = btn.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
@@ -533,7 +527,6 @@ body{
     btn.addEventListener('pointerdown', function(e) { addRipple(e, btn); });
   });
 
-  // --- Пасхалка: 5 быстрых тапов по аватарке = мини-истерика на весь экран ---
   const avatarWrap = document.getElementById('avatar-wrap');
   const rainbowOverlay = document.getElementById('rainbow-overlay');
   let tapCount = 0, tapTimer = null;
@@ -554,7 +547,6 @@ body{
     }
   }
 
-  // Короткие синтезированные звуки — без файлов, генерируются на лету
   let audioCtx = null;
   function playTone(freqStart, freqEnd, duration, type, peakGain, delaySec) {
     try {
@@ -598,7 +590,6 @@ body{
       setSpot(Math.random() * 100, Math.random() * 100);
     }, 60);
 
-    // Финальный всплеск перед тем, как всё уляжется
     setTimeout(function() {
       spawnSparks(); spawnSparks(); spawnSparks();
       playTone(1500, 2400, 0.35, 'sine', 0.04);
@@ -630,7 +621,6 @@ body{
     });
   }
 
-  // --- "Фонарик": свет следует за курсором/пальцем, в покое медленно дрейфует ---
   const root = document.documentElement;
   function setSpot(xPct, yPct) {
     root.style.setProperty('--mx', xPct.toFixed(1) + '%');
@@ -674,6 +664,31 @@ body{
       avatarWrap.addEventListener('pointerleave', function() {
         avatarWrap.style.transform = '';
       });
+    }
+
+    if (avatarWrap && !window.matchMedia('(pointer: fine)').matches && typeof DeviceOrientationEvent !== 'undefined') {
+      let gyroBaseline = null;
+      const handleOrientation = function(e) {
+        if (tiltPaused || e.beta === null || e.gamma === null) return;
+        if (!gyroBaseline) { gyroBaseline = { beta: e.beta, gamma: e.gamma }; return; }
+        const dBeta = e.beta - gyroBaseline.beta;
+        const dGamma = e.gamma - gyroBaseline.gamma;
+        const rotateX = Math.max(-16, Math.min(16, -dBeta * 0.6));
+        const rotateY = Math.max(-16, Math.min(16, dGamma * 0.6));
+        avatarWrap.style.transform =
+          'perspective(500px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg)';
+      };
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        const requestGyro = function() {
+          DeviceOrientationEvent.requestPermission().then(function(state) {
+            if (state === 'granted') window.addEventListener('deviceorientation', handleOrientation);
+          }).catch(function() {});
+          window.removeEventListener('touchend', requestGyro);
+        };
+        window.addEventListener('touchend', requestGyro, { once: true });
+      } else {
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
     }
   } else {
     setSpot(50, 32);
