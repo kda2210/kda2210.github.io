@@ -58,15 +58,25 @@ body{
   padding:24px;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color:var(--mist);
-  background:
-    linear-gradient(rgba(18,4,23,.82), rgba(18,4,23,.88)),
-    url('fioletovyj.jpeg');
+  background-color: var(--void);
+  position:relative;
+  overflow:hidden;
+}
+
+.bg-photo{
+  position:fixed;
+  inset:-6%;
+  z-index:-2;
+  background-image: url('fioletovyj.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  position:relative;
-  overflow:hidden;
+  transition: transform .15s ease-out;
+  will-change: transform;
+}
+.bg-tint{
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background: linear-gradient(rgba(18,4,23,.82), rgba(18,4,23,.88));
 }
 
 .spotlight{
@@ -92,7 +102,7 @@ body{
   100%{ opacity:0; transform:rotate(1200deg) scale(1.2); }
 }
 
-.container{ position:relative; z-index:1; width:100%; max-width:380px; text-align:center; }
+.container{ position:relative; z-index:1; width:100%; max-width:380px; text-align:center; transition: transform .1s ease-out; will-change: transform; }
 
 .hero, .actions{ opacity:0; transform:translateY(16px); }
 @media (prefers-reduced-motion:no-preference){
@@ -138,6 +148,7 @@ body{
   font-size:40px; color:#fff;
 }
 
+/* Искры пасхалки на аватарке */
 .spark{
   position:absolute;
   top:50%; left:50%;
@@ -153,6 +164,7 @@ body{
   to{ transform: translate(var(--dx), var(--dy)) scale(0); opacity:0; }
 }
 
+/* Пасхалка: 5 тапов по аватарке — всё ненадолго сходит с ума */
 @keyframes freakout-shake-arc{
   0%{ transform:translate(0,0) rotate(0deg) skew(0deg,0deg) scale(1); }
   5%{ transform:translate(-2px,1px) rotate(-1deg) skew(1deg,0.5deg) scale(1.005); }
@@ -225,6 +237,7 @@ body{
 
 .hero-sub{ font-size:15px; line-height:1.5; color:var(--mist-dim); margin-bottom:30px; }
 
+/* Часы — отдельным виджетом в углу экрана, не в основном блоке */
 .clock-corner{
   position:fixed;
   top: calc(16px + env(safe-area-inset-top, 0px));
@@ -245,6 +258,7 @@ body{
 @media (prefers-reduced-motion:no-preference){ .clock-corner{ transition:opacity .5s ease .2s; } }
 .clock-corner.show{ opacity:1; }
 
+/* Кнопка "Сохранить контакт" — плавающая, отдельно от списка способов связи */
 .sr-only{
   position:absolute; width:1px; height:1px; padding:0; margin:-1px;
   overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
@@ -336,6 +350,8 @@ body{
 </style>
 </head>
 <body>
+<div class="bg-photo" id="bg-photo" aria-hidden="true"></div>
+<div class="bg-tint" aria-hidden="true"></div>
 <div class="spotlight" aria-hidden="true"></div>
 <div class="rainbow-overlay" id="rainbow-overlay" aria-hidden="true"></div>
 
@@ -434,6 +450,7 @@ body{
     setTimeout(function() { el.textContent = text; el.style.opacity = 1; }, 180);
   }
 
+  // Часовой пояс — Екатеринбург
   const TIMEZONE = 'Asia/Yekaterinburg';
   function updateClock() {
     if (!clockEl) return;
@@ -490,6 +507,7 @@ body{
     toastEl._t = setTimeout(function() { toastEl.classList.remove('show'); }, 1800);
   }
 
+  // --- Сохранить контакт (vCard) ---
   const vcardBtn = document.getElementById('vcard-fab');
   if (vcardBtn) {
     const vcard =
@@ -500,6 +518,7 @@ body{
     vcardBtn.setAttribute('rel', 'noopener');
   }
 
+  // --- Копирование номера на компьютере вместо бесполезного tel: ---
   const phoneBtn = document.getElementById('phone-btn');
   if (phoneBtn && navigator.clipboard && window.matchMedia('(pointer: fine)').matches) {
     phoneBtn.addEventListener('click', function(e) {
@@ -510,6 +529,7 @@ body{
     });
   }
 
+  // --- Отклик на нажатие кнопок ---
   function addRipple(e, btn) {
     const rect = btn.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
@@ -527,6 +547,7 @@ body{
     btn.addEventListener('pointerdown', function(e) { addRipple(e, btn); });
   });
 
+  // --- Пасхалка: 5 быстрых тапов по аватарке = мини-истерика на весь экран ---
   const avatarWrap = document.getElementById('avatar-wrap');
   const rainbowOverlay = document.getElementById('rainbow-overlay');
   let tapCount = 0, tapTimer = null;
@@ -547,6 +568,7 @@ body{
     }
   }
 
+  // Короткие синтезированные звуки — без файлов, генерируются на лету
   let audioCtx = null;
   function playTone(freqStart, freqEnd, duration, type, peakGain, delaySec) {
     try {
@@ -579,6 +601,7 @@ body{
 
     tiltPaused = true;
     avatarWrap.style.transform = '';
+    container.style.transform = '';
     container.classList.add('freakout');
     avatarWrap.classList.add('freakout-avatar');
     titleEl.classList.add('freakout-text');
@@ -590,6 +613,7 @@ body{
       setSpot(Math.random() * 100, Math.random() * 100);
     }, 60);
 
+    // Финальный всплеск перед тем, как всё уляжется
     setTimeout(function() {
       spawnSparks(); spawnSparks(); spawnSparks();
       playTone(1500, 2400, 0.35, 'sine', 0.04);
@@ -621,6 +645,7 @@ body{
     });
   }
 
+  // --- "Фонарик": свет следует за курсором/пальцем, в покое медленно дрейфует ---
   const root = document.documentElement;
   function setSpot(xPct, yPct) {
     root.style.setProperty('--mx', xPct.toFixed(1) + '%');
@@ -666,19 +691,38 @@ body{
       });
     }
 
-    if (avatarWrap && !window.matchMedia('(pointer: fine)').matches && typeof DeviceOrientationEvent !== 'undefined') {
+    // Гироскоп на телефоне — фон, свет и вся карточка реагируют на наклон устройства
+    if (!window.matchMedia('(pointer: fine)').matches && typeof DeviceOrientationEvent !== 'undefined') {
+      const bgPhoto = document.getElementById('bg-photo');
       let gyroBaseline = null;
       const handleOrientation = function(e) {
         if (tiltPaused || e.beta === null || e.gamma === null) return;
         if (!gyroBaseline) { gyroBaseline = { beta: e.beta, gamma: e.gamma }; return; }
         const dBeta = e.beta - gyroBaseline.beta;
         const dGamma = e.gamma - gyroBaseline.gamma;
-        const rotateX = Math.max(-16, Math.min(16, -dBeta * 0.6));
-        const rotateY = Math.max(-16, Math.min(16, dGamma * 0.6));
-        avatarWrap.style.transform =
-          'perspective(500px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg)';
+        const clamp = function(v, m) { return Math.max(-m, Math.min(m, v)); };
+
+        // Вся карточка слегка наклоняется, как физический предмет в руке
+        const rotateX = clamp(-dBeta * 0.35, 9);
+        const rotateY = clamp(dGamma * 0.35, 9);
+        container.style.transform =
+          'perspective(800px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg)';
+
+        // Фон сдвигается медленнее и в противоход — эффект окна в объёмное пространство
+        if (bgPhoto) {
+          const bgX = clamp(-dGamma * 1.0, 20);
+          const bgY = clamp(-dBeta * 0.7, 20);
+          bgPhoto.style.transform = 'translate(' + bgX.toFixed(1) + 'px, ' + bgY.toFixed(1) + 'px)';
+        }
+
+        // "Фонарик" следует за наклоном телефона
+        setSpot(
+          Math.max(8, Math.min(92, 50 + dGamma * 1.4)),
+          Math.max(8, Math.min(92, 32 + dBeta * 1.0))
+        );
       };
       if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        // iOS требует явного разрешения — запрашиваем по первому касанию страницы
         const requestGyro = function() {
           DeviceOrientationEvent.requestPermission().then(function(state) {
             if (state === 'granted') window.addEventListener('deviceorientation', handleOrientation);
