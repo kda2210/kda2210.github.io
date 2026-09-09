@@ -95,7 +95,7 @@ Subscriptions have become the default business model for almost everything. For 
 
 ### ✔️ Works offline
 
-That's why my applications are designed so all core features work completely offline: no server dependency, faster performance, better privacy, use the app anywhere.
+That's why my applications are designed so all core features work completely offline: no server dependency, faster performance, better privacy, use the app anywhere. *On this particular page, the very first visit still needs a connection to load the Google Fonts typeface and the avatar image — once your browser has cached them, everything keeps working without one.*
 
 ### ✔️ Open Source from day one
 
@@ -449,7 +449,7 @@ kda2210.github.io просто отвечает на один вопрос:
 
 ### ✔️ Работает офлайн
 
-Поэтому все мои приложения спроектированы так, чтобы все основные функции работали полностью офлайн: никакой зависимости от сервера, выше скорость, больше приватности, можно пользоваться где угодно.
+Поэтому все мои приложения спроектированы так, чтобы все основные функции работали полностью офлайн: никакой зависимости от сервера, выше скорость, больше приватности, можно пользоваться где угодно. *На этой конкретной странице первый заход всё же требует соединения — чтобы подгрузить шрифт Google Fonts и аватар; после того как браузер их закэширует, всё продолжает работать без сети.*
 
 ### ✔️ Открытый код с первого дня
 

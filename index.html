@@ -8,9 +8,6 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#120417">
 <link rel="canonical" href="https://kda2210.github.io/">
-<link rel="alternate" hreflang="ru" href="https://kda2210.github.io/">
-<link rel="alternate" hreflang="en" href="https://kda2210.github.io/">
-<link rel="alternate" hreflang="x-default" href="https://kda2210.github.io/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +17,7 @@
 <link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
 <link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
 
+<meta property="og:url" content="https://kda2210.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kda2210">
@@ -411,10 +409,12 @@ body{
   const translations = {
     ru: { title:'Важно, что внутри.', sub:'Выбирай удобный способ связи.', divider:'или',
           tg:"Написать в Telegram", email:"Написать на почту", vk:"Написать ВКонтакте", phone:"Позвонить",
-          vcard:"Сохранить контакт", copied:"Скопировано", secret:"Поймал(а) радужный портал 🌈✨" },
+          vcard:"Сохранить контакт", copied:"Скопировано", secret:"Поймал(а) радужный портал 🌈✨",
+          avatarAlt:"Аватар" },
     en: { title:'What matters is what\u2019s inside.', sub:'Choose a convenient way to get in touch.', divider:'or',
           tg:"Write in Telegram", email:"Write an email", vk:"Write in VK", phone:"Call",
-          vcard:"Save contact", copied:"Copied", secret:"Caught the rainbow portal 🌈✨" }
+          vcard:"Save contact", copied:"Copied", secret:"Caught the rainbow portal 🌈✨",
+          avatarAlt:"Avatar" }
   };
 
   const htmlRoot = document.getElementById('html-root');
@@ -425,6 +425,7 @@ body{
   const clockCorner = document.getElementById('clock-corner');
   const clockEl = document.getElementById('clock-text');
   const toastEl = document.getElementById('toast');
+  const avatarImg = document.querySelector('.avatar');
   const langButtons = document.querySelectorAll('.lang-btn');
   const translatableLinks = document.querySelectorAll('[data-i18n]');
 
@@ -467,6 +468,8 @@ body{
     setText(titleEl, t.title, instant);
     setText(subEl, t.sub, instant);
     setText(dividerEl, t.divider, instant);
+    document.title = t.title;
+    if (avatarImg && !avatarImg.classList.contains('avatar-error')) avatarImg.alt = t.avatarAlt;
     translatableLinks.forEach(link => {
       const key = link.dataset.i18n;
       const span = link.querySelector('.btn-text');
