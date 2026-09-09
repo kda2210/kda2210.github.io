@@ -119,17 +119,21 @@ It isn't trying to be a template or a starter kit — it's simply the page I use
 <a name="en-screenshots"></a>
 ## 🎬 Screenshots
 
-<!--
-  A short GIF or screen recording will show this better than a static
-  image — the ambient light, the gyroscope parallax, and the vCard
-  flow are all motion, not layout. e.g.:
+<details>
+<summary><b>📸 Show screenshot</b></summary>
+<br>
 
-  <p align="center">
-    <img src="docs/preview.gif" width="480" alt="Card preview">
-  </p>
--->
+<p align="center">
+  <a href="docs/Screenshot_20260909-142548.webp" target="_blank">
+    <img src="docs/Screenshot_20260909-142548.webp" width="220" alt="Card preview">
+  </a>
+</p>
 
-*Coming soon — best shown as a short clip rather than a still image, given the motion involved.*
+<p align="center"><sub>Click the screenshot to open it full size</sub></p>
+
+</details>
+
+*A short GIF would show it even better — the ambient light and gyroscope parallax are motion, not layout. That's still coming.*
 
 ---
 
@@ -470,15 +474,19 @@ kda2210.github.io — моя личная цифровая визитка: ав�
 ## 🎬 Скриншоты
 
 <details>
-  <p align="center">
-    <img src="docs/Screenshot_20260909-142540.png" width="480" alt="Превью визитки">
-  </p>
+<summary><b>📸 Показать скриншот</b></summary>
+<br>
 
+<p align="center">
+  <a href="docs/Screenshot_20260909-142540.webp" target="_blank">
+    <img src="docs/Screenshot_20260909-142540.webp" width="220" alt="Превью визитки">
+  </a>
+</p>
 
-  <p align="center">
-    <img src="docs/Screenshot_20260909-142548.png" width="480" alt="Превью визитки">
-  </p>
+<p align="center"><sub>Нажмите на скриншот, чтобы открыть в полном размере</sub></p>
+
 </details>
+
 ---
 
 <a name="ru-try"></a>
