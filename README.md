@@ -305,7 +305,6 @@ If you'd like to support the development of current and future projects, pick wh
 
 <p align="left">
 <a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-Pay%20by%20card-0a84ff" alt="CloudTips"></a>
-<a href="https://spasibomir.ru/pay/34778"><img src="https://img.shields.io/badge/SpasiboMir-Support-ff6f61" alt="SpasiboMir"></a>
 </p>
 
 **Crypto**
@@ -662,7 +661,6 @@ LICENSE               — лицензия MIT (только на код, см. 
 
 <p align="left">
 <a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-Pay%20by%20card-0a84ff" alt="CloudTips"></a>
-<a href="https://spasibomir.ru/pay/34778"><img src="https://img.shields.io/badge/SpasiboMir-Support-ff6f61" alt="SpasiboMir"></a>
 </p>
 
 **Криптовалюта**
