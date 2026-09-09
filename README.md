@@ -469,6 +469,7 @@ kda2210.github.io — моя личная цифровая визитка: ав�
 <a name="ru-screenshots"></a>
 ## 🎬 Скриншоты
 
+<details>
   <p align="center">
     <img src="docs/Screenshot_20260909-142540.png" width="480" alt="Превью визитки">
   </p>
@@ -477,6 +478,7 @@ kda2210.github.io — моя личная цифровая визитка: ав�
   <p align="center">
     <img src="docs/Screenshot_20260909-142548.png" width="480" alt="Превью визитки">
   </p>
+</details>
 ---
 
 <a name="ru-try"></a>
