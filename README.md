@@ -301,12 +301,6 @@ If you'd like to support the development of current and future projects, pick wh
 
 <br>
 
-**Card payments (Russia)**
-
-<p align="left">
-<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-Pay%20by%20card-0a84ff" alt="CloudTips"></a>
-</p>
-
 **Crypto**
 
 ₮ USDT (TRC20)
@@ -475,18 +469,14 @@ kda2210.github.io — моя личная цифровая визитка: ав�
 <a name="ru-screenshots"></a>
 ## 🎬 Скриншоты
 
-<!--
-  Короткий GIF или запись экрана покажет это лучше, чем статичная
-  картинка — подсветка, параллакс от гироскопа и генерация vCard —
-  это всё движение, а не статичная вёрстка. Например:
+  <p align="center">
+    <img src="docs/Screenshot_20260909-142540.png" width="480" alt="Превью визитки">
+  </p>
+
 
   <p align="center">
-    <img src="docs/preview.gif" width="480" alt="Превью визитки">
+    <img src="docs/Screenshot_20260909-142548.png" width="480" alt="Превью визитки">
   </p>
--->
-
-*Скоро — лучше показать коротким видео, чем статичным скриншотом, учитывая, сколько тут завязано на движении.*
-
 ---
 
 <a name="ru-try"></a>
