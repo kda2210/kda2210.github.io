@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hall of Supporters — kda2210</title>
+<meta name="description" content="A shared record of everyone who has chosen to support kda2210's open-source projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efeee8;
+    --paper-raised:#f6f5f0;
+    --ink:#1c2230;
+    --ink-soft:#6b6459;
+    --seal:#7a2e2e;
+    --line:#d8d4c8;
+    --maxw:640px;
+  }
+  *{box-sizing:border-box;}
+  html{color-scheme:light;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--seal);
+    outline-offset:3px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* language toggling: whole blocks only, never mid-sentence */
+  .i18n{display:none;}
+  html[data-lang="en"] .i18n[lang="en"]{display:block;}
+  html[data-lang="ru"] .i18n[lang="ru"]{display:block;}
+
+  .topbar{
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{
+    font-family:"Newsreader",serif;
+    font-size:19px;
+    text-decoration:none;
+    letter-spacing:0.01em;
+  }
+  .langtoggle{display:flex;gap:2px;font-size:13px;}
+  .langtoggle button{
+    background:none;border:1px solid var(--line);
+    padding:5px 10px;font:inherit;font-family:"IBM Plex Sans",sans-serif;
+    color:var(--ink-soft);cursor:pointer;
+  }
+  .langtoggle button[aria-pressed="true"]{
+    color:var(--paper);background:var(--ink);border-color:var(--ink);
+  }
+  .langtoggle button:first-child{border-radius:3px 0 0 3px;}
+  .langtoggle button:last-child{border-radius:0 3px 3px 0;border-left:none;}
+
+  .hero{padding:56px 0 40px;}
+  .hero.i18n{ /* still needs the show/hide rule above; this just adds spacing */ }
+  .seal{display:block;margin-bottom:18px;}
+  h1{
+    font-family:"Newsreader",serif;
+    font-weight:600;
+    font-size:38px;
+    line-height:1.15;
+    margin:0 0 18px;
+  }
+  .hero p{
+    max-width:52ch;
+    color:var(--ink-soft);
+    font-size:16px;
+    margin:0;
+  }
+  .hero p a{border-bottom:1px solid var(--ink-soft);text-decoration:none;}
+  .hero-rule{border:none;border-top:1px solid var(--line);margin:32px 0 0;}
+
+  section.ledger{padding:44px 0;border-top:1px solid var(--line);}
+  section.ledger h2{
+    font-family:"Newsreader",serif;
+    font-weight:500;
+    font-size:22px;
+    margin:0 0 8px;
+  }
+  section.ledger > .i18n > p.lede{
+    color:var(--ink-soft);
+    font-size:15px;
+    max-width:54ch;
+    margin:0 0 28px;
+  }
+  section.ledger p.lede a{color:var(--ink);}
+
+  ol.ledger-list{list-style:none;margin:0 0 28px;padding:0;counter-reset:row;}
+  ol.ledger-list li{
+    counter-increment:row;
+    display:flex;
+    gap:14px;
+    align-items:baseline;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+  }
+  ol.ledger-list li::before{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13px;
+    color:var(--seal);
+    flex:0 0 auto;
+    min-width:58px;
+  }
+  [lang="en"] ol.ledger-list li::before{content:"No. " counter(row,decimal-leading-zero);}
+  [lang="ru"] ol.ledger-list li::before{content:"№ " counter(row,decimal-leading-zero);}
+  ol.ledger-list li.open{color:var(--ink-soft);font-style:italic;}
+  ol.ledger-list li .name{font-weight:500;}
+  ol.ledger-list li a.name-link{text-decoration:none;border-bottom:1px solid var(--line);}
+
+  .cta{
+    display:inline-block;
+    font:inherit;
+    font-size:15px;
+    color:var(--paper);
+    background:var(--ink);
+    padding:11px 18px;
+    text-decoration:none;
+    border-radius:2px;
+  }
+  .cta:hover{background:var(--seal);}
+
+  footer{border-top:1px solid var(--line);padding:36px 0 56px;}
+  footer p{color:var(--ink-soft);font-size:14px;margin:0 0 6px;}
+  footer a{border-bottom:1px solid var(--line);text-decoration:none;}
+
+  @media (max-width:480px){
+    body{font-size:16px;}
+    h1{font-size:30px;}
+  }
+
+  @media (prefers-reduced-motion:no-preference){
+    .hero{animation:rise .5s ease-out both;}
+    @keyframes rise{
+      from{opacity:0;transform:translateY(6px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="https://kda2210.github.io">kda2210</a>
+    <div class="langtoggle" role="group" aria-label="Language / Язык">
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-ru" aria-pressed="false">RU</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+
+      <svg class="seal" width="42" height="42" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <circle cx="22" cy="22" r="19.5" stroke="#7a2e2e" stroke-width="1.1"/>
+        <circle cx="22" cy="22" r="15.5" stroke="#7a2e2e" stroke-width="0.6"/>
+        <path d="M22 14.5l2.1 4.4 4.85.7-3.5 3.4.83 4.82L22 25.5l-4.28 2.32.83-4.82-3.5-3.4 4.85-.7L22 14.5z" fill="#7a2e2e"/>
+      </svg>
+
+      <div class="i18n" lang="en">
+        <h1>Hall of Supporters</h1>
+        <p>A shared record of everyone — people and organizations — who has chosen, on their own, to support one or more of my projects. Being listed here is not a privilege or a status inside any app, just a public thank-you, and only ever with that person's consent. The full philosophy behind this is written up in the <a href="https://github.com/kda2210/kda2210.github.io">card's README</a>.</p>
+      </div>
+      <div class="i18n" lang="ru">
+        <h1>Стена поддержавших</h1>
+        <p>Общий список людей и организаций, которые по собственному желанию поддержали один или несколько моих проектов. Присутствие здесь — не привилегия и не статус внутри приложений, а просто публичное «спасибо», и только с согласия самого человека. Полное описание принципов — в <a href="https://github.com/kda2210/kda2210.github.io">README визитки</a>.</p>
+      </div>
+
+    </div>
+    <hr class="hero-rule">
+  </section>
+
+  <section class="ledger" id="organizations">
+    <div class="wrap">
+
+      <div class="i18n" lang="en">
+        <h2>Organizations &amp; partners</h2>
+        <p class="lede">Companies, foundations, and employers who support this work directly — see the "For Organizations &amp; Partners" section in any project's README for what that can look like.</p>
+      </div>
+      <div class="i18n" lang="ru">
+        <h2>Организации и партнёры</h2>
+        <p class="lede">Компании, фонды и работодатели, которые поддерживают эту работу напрямую — подробнее о формах поддержки в разделе «Организациям и партнёрам» README любого проекта.</p>
+      </div>
+
+      <!--
+        Как добавить организацию:
+        1. Возьмите любую строку с классом "open" ниже.
+        2. Уберите class="open", замените текст на название организации
+           (и, если есть ссылка, оберните в <a class="name-link" href="...">).
+        3. Допишите новую пустую строку в конец списка, чтобы реестр
+           выглядел открытым для следующей записи. Нумерация — автоматическая.
+      -->
+      <div class="i18n" lang="en">
+        <ol class="ledger-list">
+          <li class="open">This line is open.</li>
+          <li class="open">This line is open.</li>
+          <li class="open">This line is open.</li>
+        </ol>
+        <a class="cta" id="mail-partner-en" href="#">Email about a partnership</a>
+      </div>
+      <div class="i18n" lang="ru">
+        <ol class="ledger-list">
+          <li class="open">Эта строка свободна.</li>
+          <li class="open">Эта строка свободна.</li>
+          <li class="open">Эта строка свободна.</li>
+        </ol>
+        <a class="cta" id="mail-partner-ru" href="#">Написать о партнёрстве</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ledger" id="supporters">
+    <div class="wrap">
+
+      <div class="i18n" lang="en">
+        <h2>Supporters</h2>
+        <p class="lede">Everyone who donated and asked to be listed here — always by explicit consent, never in exchange for any feature or privilege inside the apps.</p>
+      </div>
+      <div class="i18n" lang="ru">
+        <h2>Поддержавшие</h2>
+        <p class="lede">Каждый, кто задонатил и захотел, чтобы его имя было здесь — только по явному согласию, и никогда в обмен на какую-либо функцию или привилегию внутри приложений.</p>
+      </div>
+
+      <!-- Тот же принцип: занять "open"-строку именем, добавить новую пустую в конец. -->
+      <div class="i18n" lang="en">
+        <ol class="ledger-list">
+          <li class="open">This line is open.</li>
+          <li class="open">This line is open.</li>
+          <li class="open">This line is open.</li>
+          <li class="open">This line is open.</li>
+        </ol>
+        <a class="cta" id="mail-supporter-en" href="#">Add my name</a>
+      </div>
+      <div class="i18n" lang="ru">
+        <ol class="ledger-list">
+          <li class="open">Эта строка свободна.</li>
+          <li class="open">Эта строка свободна.</li>
+          <li class="open">Эта строка свободна.</li>
+          <li class="open">Эта строка свободна.</li>
+        </ol>
+        <a class="cta" id="mail-supporter-ru" href="#">Добавить своё имя</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="i18n" lang="en">
+      <p><a href="https://github.com/kda2210">kda2210 on GitHub</a></p>
+      <p>This page is updated by hand, not automatically.</p>
+    </div>
+    <div class="i18n" lang="ru">
+      <p><a href="https://github.com/kda2210">kda2210 на GitHub</a></p>
+      <p>Страница обновляется вручную, без автоматизации.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root = document.documentElement;
+    var btnEn = document.getElementById('btn-en');
+    var btnRu = document.getElementById('btn-ru');
+
+    function setLang(lang){
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+      btnRu.setAttribute('aria-pressed', String(lang === 'ru'));
+    }
+    btnEn.addEventListener('click', function(){ setLang('en'); });
+    btnRu.addEventListener('click', function(){ setLang('ru'); });
+
+    // Build mailto links without hand-encoding Cyrillic.
+    var EMAIL = 'kda2210@duck.com';
+
+    function mailto(subject, body){
+      return 'mailto:' + EMAIL
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+    }
+
+    document.getElementById('mail-partner-en').href = mailto(
+      'Partnership',
+      'Organization: \nWebsite: \nWhat you\u2019d like to discuss: '
+    );
+    document.getElementById('mail-partner-ru').href = mailto(
+      'Партнёрство',
+      'Организация: \nСайт: \nЧто хотели бы обсудить: '
+    );
+    document.getElementById('mail-supporter-en').href = mailto(
+      'Hall of Supporters',
+      'Nickname to list: \n(optional) Project you supported: \n(optional) Link to show next to your name: '
+    );
+    document.getElementById('mail-supporter-ru').href = mailto(
+      'Стена поддержавших',
+      'Ник для списка: \n(необязательно) Какой проект поддержали: \n(необязательно) Ссылка рядом с именем: '
+    );
+  })();
+</script>
+
+</body>
+</html>
