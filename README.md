@@ -20,7 +20,9 @@
 <a href="#en-license">📄 License</a> ·
 <a href="#en-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Support%20this%20project-e25555" alt="Support this project"></a> ·
 <a href="#en-partners">🏛️ Partners</a> ·
+<!-- ROADMAP TOGGLE (nav): delete this comment pair to show the link for a project that has a roadmap
 <a href="#en-roadmap">🗺️ Roadmap</a> ·
+-->
 <a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Issues</a> ·
 <a href="#ru-top">🇷🇺 RU</a>
 </p>
@@ -39,7 +41,9 @@
 - [License](#en-license)
 - [Support](#en-support)
 - [For Organizations & Partners](#en-partners)
+<!-- ROADMAP TOGGLE (toc): delete this comment pair to show the entry for a project that has a roadmap
 - [Public Roadmap](#en-roadmap)
+-->
 - 🐛 [Report an issue](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -309,6 +313,12 @@ If you'd like to support the development of current and future projects, pick wh
 
 <br>
 
+**One-time — card (Russia)**
+
+<p align="left">
+<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-One--time%20card-0a84ff" alt="CloudTips"></a>
+</p>
+
 **Ongoing — monthly support**
 
 <p align="left">
@@ -380,7 +390,7 @@ Organizations — companies, foundations, employers, NGOs — sometimes want to 
 
 Sponsor a concrete addition — a new language, a specific capability — and get named, permanent credit for it once it ships. It's released free to everyone regardless, same as everything else.
 
-1. You propose a feature, or pick one from the [roadmap](#en-roadmap).
+1. You propose a feature — or, if this project keeps a public roadmap, pick one from there.
 2. We agree on scope, timeline, and price.
 3. You fund it — in full, or split with other sponsors.
 4. It ships free for everyone.
@@ -404,6 +414,8 @@ Interested? **kda2210@duck.com** — put "Partnership" in the subject line.
 
 ---
 
+<!-- ROADMAP TOGGLE (section): delete this comment pair for a project that has a real roadmap to show
+
 <a name="en-roadmap"></a>
 ## 🗺️ Public Roadmap
 
@@ -419,6 +431,8 @@ Want to suggest something? [Open an issue](https://github.com/kda2210/kda2210.gi
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
 ---
+
+-->
 
 <details>
 <summary><b>Does "free" still apply if my organization is paying?</b></summary>
@@ -454,7 +468,9 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 <a href="#ru-license">📄 Лицензия</a> ·
 <a href="#ru-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-e25555" alt="Поддержать проект"></a> ·
 <a href="#ru-partners">🏛️ Партнёрам</a> ·
+<!-- ROADMAP TOGGLE (nav): удалите эту пару комментариев, чтобы показать ссылку для проекта с дорожной картой
 <a href="#ru-roadmap">🗺️ Планы</a> ·
+-->
 <a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Баги</a> ·
 <a href="#en-top">🇬🇧 EN</a>
 </p>
@@ -473,7 +489,9 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 - [Лицензия](#ru-license)
 - [Поддержка](#ru-support)
 - [Организациям и партнёрам](#ru-partners)
+<!-- ROADMAP TOGGLE (toc): удалите эту пару комментариев, чтобы показать пункт для проекта с дорожной картой
 - [Дорожная карта](#ru-roadmap)
+-->
 - 🐛 [Сообщить об ошибке](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -818,7 +836,7 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 Профинансируйте конкретное дополнение — новый язык, отдельную возможность — и получите постоянное именное упоминание за этот вклад после релиза. Функция всё равно выходит бесплатно для всех, как и всё остальное.
 
-1. Вы предлагаете фичу или выбираете её из [дорожной карты](#ru-roadmap).
+1. Вы предлагаете фичу — или, если для этого проекта ведётся дорожная карта, выбираете её оттуда.
 2. Договариваемся об объёме, сроках и цене.
 3. Вы финансируете её — полностью или в складчину с другими спонсорами.
 4. Она выходит бесплатно для всех.
@@ -842,6 +860,8 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 ---
 
+<!-- ROADMAP TOGGLE (section): удалите эту пару комментариев для проекта, где есть реальная дорожная карта
+
 <a name="ru-roadmap"></a>
 ## 🗺️ Дорожная карта
 
@@ -857,6 +877,8 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
 ---
+
+-->
 
 <details>
 <summary><b>«Бесплатно» всё ещё действует, если платит моя организация?</b></summary>
