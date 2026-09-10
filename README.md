@@ -19,6 +19,7 @@
 <a href="#en-features">✨ Features</a> ·
 <a href="#en-license">📄 License</a> ·
 <a href="#en-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Support%20this%20project-e25555" alt="Support this project"></a> ·
+<a href="#en-partners">🏛️ Partners</a> ·
 <a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Issues</a> ·
 <a href="#ru-top">🇷🇺 RU</a>
 </p>
@@ -36,6 +37,7 @@
 - [FAQ](#en-faq)
 - [License](#en-license)
 - [Support](#en-support)
+- [For Organizations & Partners](#en-partners)
 - 🐛 [Report an issue](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -286,10 +288,10 @@ Use it. Study it. Fork it. Build your own version.
 
 Creating applications like this takes a great deal of time. I keep doing it because I genuinely enjoy building tools that make everyday life a little better.
 
-If my projects help people, voluntary support lets me spend more time improving existing apps and building new ones.
+If my projects help people, voluntary support lets me spend more time improving existing apps and building new ones. None of it changes how the apps work, for anyone.
 
 > [!NOTE]
-> Support is entirely optional. It doesn't unlock any features, and it changes nothing about how the apps work — it's simply a way of saying **"thank you." ❤️**
+> Support is entirely optional, and the amount is entirely up to you — there's no suggested figure, and no amount is "too small." It doesn't unlock any features, and it changes nothing about how the apps work. It's simply a way of saying **"thank you." ❤️**
 
 If even one of my applications has been useful to you, then all the hours spent building it were worth it. Thank you for using my projects.
 
@@ -298,12 +300,26 @@ If even one of my applications has been useful to you, then all the hours spent 
 <a name="en-support"></a>
 ## ❤️ Voluntary Support
 
-If you'd like to support the development of current and future projects, pick whatever's easiest for you.
+If you'd like to support the development of current and future projects, pick whatever's easiest for you. The amount is always yours to choose.
 
 <details>
 <summary><b>💳 Show all ways to support</b></summary>
 
 <br>
+
+**One-time — card (Russia)**
+
+<p align="left">
+<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-One--time%20card-0a84ff" alt="CloudTips"></a>
+</p>
+
+**Ongoing — monthly support**
+
+<p align="left">
+<a href="https://boosty.to/kda2210"><img src="https://img.shields.io/badge/Boosty-Monthly%20support-f15f2c" alt="Boosty"></a>
+</p>
+
+*Called "monthly support," not a subscription — same as a one-time donation, it unlocks nothing and can be cancelled anytime.*
 
 **Crypto**
 
@@ -348,6 +364,39 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 </details>
 
+**[Hall of Supporters](https://kda2210.github.io/supporters)** — a shared thank-you page across all of my projects. Being listed there is entirely opt-in and off by default: supporting a project never adds your name anywhere unless you explicitly ask for it.
+
+<p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
+
+---
+
+<a name="en-partners"></a>
+## 🏛️ For Organizations & Partners
+
+Everything above is for individuals, and none of it changes here: this project stays 100% free, ad-free, and fully functional for anyone who downloads it. This section doesn't add a paid tier — it just describes a different kind of supporter.
+
+Organizations — companies, foundations, employers, NGOs — sometimes want to support this work in ways an individual can't, or need to put a project in front of a group of people at once. A few ways that works:
+
+- **Sponsorship credit.** A contribution gets a static "Supported by [name]" line here and on the [Hall of Supporters](https://kda2210.github.io/supporters) — not a banner, not a pop-up, nothing shown inside the app itself.
+- **Organizational deployment.** If you want to roll this project out to your employees, members, or users, I can work out a license covering your organization. Each person still gets it free, exactly like everyone else — the organization is the one paying, not them.
+- **Fund a specific feature.** Sponsor a concrete addition — a new language, a specific capability — and get named credit for that contribution once it ships. It's released free to everyone regardless.
+
+This particular page doesn't have an obvious organizational use case on its own — it's my personal card, not a tool. But it's also the canonical home of these principles, so if you'd rather sponsor the whole lineup of projects instead of one specific tool, this is the right place to reach out.
+
+Interested? **kda2210@duck.com** — put "Partnership" in the subject line.
+
+<p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
+
+---
+
+<details>
+<summary><b>Does "free" still apply if my organization is paying?</b></summary>
+<br>
+
+Yes. Organizational licensing pays for a deployment at scale — it never turns a feature on or off for anyone. Every individual gets the exact same free, full version whether they found it themselves or got it through an organization.
+
+</details>
+
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
 ---
@@ -372,8 +421,9 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 <a href="#ru-try">🔗 Посмотреть</a> ·
 <a href="#ru-features">✨ Функции</a> ·
 <a href="#ru-license">📄 Лицензия</a> ·
-<a href="#ru-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Support%20this%20project-e25555" alt="Поддержать проект"></a> ·
-<a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Issues</a> ·
+<a href="#ru-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-e25555" alt="Поддержать проект"></a> ·
+<a href="#ru-partners">🏛️ Партнёрам</a> ·
+<a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Баги</a> ·
 <a href="#en-top">🇬🇧 EN</a>
 </p>
 
@@ -390,6 +440,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 - [FAQ](#ru-faq)
 - [Лицензия](#ru-license)
 - [Поддержка](#ru-support)
+- [Организациям и партнёрам](#ru-partners)
 - 🐛 [Сообщить об ошибке](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -412,11 +463,11 @@ kda2210.github.io просто отвечает на один вопрос:
 
 Если вам интересно, почему я осознанно выбираю именно такой подход — эта страница объясняет и саму страницу, и философию за ней.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
-[![Support voluntary](https://img.shields.io/badge/Support-%E2%9D%A4%EF%B8%8F%20voluntary-blueviolet)](#ru-support)
-[![Live demo](https://img.shields.io/badge/live-kda2210.github.io-8a2be2)](https://kda2210.github.io)
-![Zero dependencies](https://img.shields.io/badge/dependencies-0-success)
+[![Лицензия: MIT](https://img.shields.io/badge/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Открытый код](https://img.shields.io/badge/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%B4-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
+[![Поддержка добровольно](https://img.shields.io/badge/%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-%E2%9D%A4%EF%B8%8F%20%D0%B4%D0%BE%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE-blueviolet)](#ru-support)
+[![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-kda2210.github.io-8a2be2)](https://kda2210.github.io)
+![Ноль зависимостей](https://img.shields.io/badge/%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-0-success)
 
 ---
 
@@ -638,30 +689,37 @@ LICENSE               — лицензия MIT (только на код, см. 
 
 Разработка таких приложений отнимает очень много времени. Я продолжаю этим заниматься, потому что мне искренне нравится создавать инструменты, которые делают повседневную жизнь немного лучше.
 
-Если мои проекты кому-то помогают, добровольная поддержка позволяет мне уделять больше времени доработке существующих приложений и созданию новых.
+Если мои проекты кому-то помогают, добровольная поддержка позволяет мне уделять больше времени доработке существующих приложений и созданию новых. Это никак не меняет, как работают приложения — ни для кого.
 
 > [!NOTE]
-> Поддержка полностью добровольна. Она не открывает никаких дополнительных функций и никак не меняет работу приложений — это просто способ сказать **«спасибо». ❤️**
+> Поддержка полностью добровольна, а сумму вы выбираете сами — нет ни рекомендованной суммы, ни «слишком маленького» вклада. Она не открывает никаких дополнительных функций и никак не меняет работу приложений — это просто способ сказать **«спасибо». ❤️**
 
 Если хотя бы одно из моих приложений оказалось вам полезным — значит, все часы, потраченные на его создание, того стоили. Спасибо, что пользуетесь моими проектами.
 
 ---
 
-<a name="ru-support"></a>
 ## ❤️ Добровольная поддержка
 
-Если хотите поддержать разработку текущих и будущих проектов — выберите любой удобный для вас способ.
+Если хотите поддержать разработку текущих и будущих проектов — выберите любой удобный для вас способ. Сумму всегда выбираете вы.
 
 <details>
 <summary><b>💳 Показать все способы поддержки</b></summary>
 
 <br>
 
-**Оплата картой (Россия)**
+**Разово — оплата картой (Россия)**
 
 <p align="left">
-<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-Pay%20by%20card-0a84ff" alt="CloudTips"></a>
+<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-%D0%A0%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B0-0a84ff" alt="CloudTips"></a>
 </p>
+
+**Регулярно — ежемесячная поддержка**
+
+<p align="left">
+<a href="https://boosty.to/kda2210"><img src="https://img.shields.io/badge/Boosty-%D0%95%D0%B6%D0%B5%D0%BC%D0%B5%D1%81%D1%8F%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-f15f2c" alt="Boosty"></a>
+</p>
+
+*Это «ежемесячная поддержка», не подписка — как и разовый донат, она ничего не открывает и её можно остановить в любой момент.*
 
 **Криптовалюта**
 
@@ -706,6 +764,39 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 </details>
 
+**[Стена поддержавших](https://kda2210.github.io/supporters)** — общая страница благодарности для всех моих проектов. Попадание туда — только по явному согласию и по умолчанию выключено: поддержка проекта сама по себе никогда никуда не добавляет ваше имя.
+
+<p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
+
+---
+
+<a name="ru-partners"></a>
+## 🏛️ Организациям и партнёрам
+
+Всё написанное выше — про частных пользователей, и здесь ничего не меняется: проект остаётся на 100% бесплатным, без рекламы и полностью рабочим для любого, кто его скачает. Этот раздел не добавляет платный уровень — он просто описывает другой тип поддержки.
+
+Организации — компании, фонды, работодатели, НКО — иногда хотят поддержать эту работу способом, недоступным частному человеку, или показать проект сразу большой группе людей. Вот как это может выглядеть:
+
+- **Спонсорское упоминание.** Взнос даёт статичную строку «Поддержано [название]» здесь и на [Стене поддержавших](https://kda2210.github.io/supporters) — не баннер, не всплывающее окно, ничего внутри самого приложения.
+- **Развёртывание для организации.** Если хотите раздать проект своим сотрудникам, участникам или пользователям — можем оформить лицензию на организацию. Каждый человек по-прежнему получает его бесплатно, как и все остальные — платит организация, а не он.
+- **Финансирование конкретной фичи.** Профинансируйте конкретное дополнение — новый язык, отдельную возможность — и получите именное упоминание за этот вклад после релиза. Функция всё равно выходит бесплатно для всех.
+
+У этой конкретной страницы нет очевидного применения для организаций — это моя личная визитка, а не инструмент. Но именно здесь живёт объяснение всех принципов целиком, так что если хочется спонсировать не один конкретный проект, а всю линейку сразу — пишите сюда.
+
+Заинтересовало? **kda2210@duck.com** — укажите «Partnership» в теме письма.
+
+<p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
+
+---
+
+<details>
+<summary><b>«Бесплатно» всё ещё действует, если платит моя организация?</b></summary>
+<br>
+
+Да. Лицензия для организации оплачивает развёртывание в масштабе — она никогда не включает и не выключает функции для кого-либо. Каждый человек получает одну и ту же бесплатную полную версию — нашёл он проект сам или получил через организацию.
+
+</details>
+
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
 ---
@@ -716,4 +807,4 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 Независимо от того, решите вы поддержать проекты или нет, я искренне благодарен каждому, кто ими пользуется. Именно вы — причина, по которой они продолжают развиваться. ❤️
 
-<p align="right"><a href="#en-top">🇬🇧 Read in English ↑</a></p>
+<p align="right"><a href="#en-top">🇬🇧 Читать на английском ↑</a></p>
