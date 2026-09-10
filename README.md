@@ -20,6 +20,7 @@
 <a href="#en-license">📄 License</a> ·
 <a href="#en-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Support%20this%20project-e25555" alt="Support this project"></a> ·
 <a href="#en-partners">🏛️ Partners</a> ·
+<a href="#en-roadmap">🗺️ Roadmap</a> ·
 <a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Issues</a> ·
 <a href="#ru-top">🇷🇺 RU</a>
 </p>
@@ -38,6 +39,7 @@
 - [License](#en-license)
 - [Support](#en-support)
 - [For Organizations & Partners](#en-partners)
+- [Public Roadmap](#en-roadmap)
 - 🐛 [Report an issue](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -307,12 +309,6 @@ If you'd like to support the development of current and future projects, pick wh
 
 <br>
 
-**One-time — card (Russia)**
-
-<p align="left">
-<a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-One--time%20card-0a84ff" alt="CloudTips"></a>
-</p>
-
 **Ongoing — monthly support**
 
 <p align="left">
@@ -379,11 +375,46 @@ Organizations — companies, foundations, employers, NGOs — sometimes want to 
 
 - **Sponsorship credit.** A contribution gets a static "Supported by [name]" line here and on the [Hall of Supporters](https://kda2210.github.io/supporters) — not a banner, not a pop-up, nothing shown inside the app itself.
 - **Organizational deployment.** If you want to roll this project out to your employees, members, or users, I can work out a license covering your organization. Each person still gets it free, exactly like everyone else — the organization is the one paying, not them.
-- **Fund a specific feature.** Sponsor a concrete addition — a new language, a specific capability — and get named credit for that contribution once it ships. It's released free to everyone regardless.
+
+### 🎯 Fund a specific feature
+
+Sponsor a concrete addition — a new language, a specific capability — and get named, permanent credit for it once it ships. It's released free to everyone regardless, same as everything else.
+
+1. You propose a feature, or pick one from the [roadmap](#en-roadmap).
+2. We agree on scope, timeline, and price.
+3. You fund it — in full, or split with other sponsors.
+4. It ships free for everyone.
+5. You get a "Funded by [name]" credit in the changelog and here.
+
+Rough pricing depends on scope — a translation might run a couple hundred dollars, a small feature more, something larger more still. Always discussed and agreed before any work starts, never a fixed price list.
+
+**Currently seeking sponsors**
+
+| Feature | Status |
+|---|---|
+| _— open slot —_ | _seeking a sponsor_ |
+
+*(This table only lists something once there's a real feature to fund — an honest empty slot beats a made-up percentage.)*
 
 This particular page doesn't have an obvious organizational use case on its own — it's my personal card, not a tool. But it's also the canonical home of these principles, so if you'd rather sponsor the whole lineup of projects instead of one specific tool, this is the right place to reach out.
 
 Interested? **kda2210@duck.com** — put "Partnership" in the subject line.
+
+<p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
+
+---
+
+<a name="en-roadmap"></a>
+## 🗺️ Public Roadmap
+
+*(Per-project: list 2–4 real upcoming features here once there's something concrete, so sponsors have real things to fund. Delete this whole section for a project that doesn't have a roadmap worth showing yet — an empty roadmap looks worse than no roadmap.)*
+
+**Not planned, on principle:**
+- Server-side features that would require giving up offline use
+- Analytics or tracking of any kind
+- Paid tiers or premium features
+
+Want to suggest something? [Open an issue](https://github.com/kda2210/kda2210.github.io/issues).
 
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
@@ -423,6 +454,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 <a href="#ru-license">📄 Лицензия</a> ·
 <a href="#ru-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-e25555" alt="Поддержать проект"></a> ·
 <a href="#ru-partners">🏛️ Партнёрам</a> ·
+<a href="#ru-roadmap">🗺️ Планы</a> ·
 <a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Баги</a> ·
 <a href="#en-top">🇬🇧 EN</a>
 </p>
@@ -441,6 +473,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 - [Лицензия](#ru-license)
 - [Поддержка](#ru-support)
 - [Организациям и партнёрам](#ru-partners)
+- [Дорожная карта](#ru-roadmap)
 - 🐛 [Сообщить об ошибке](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
@@ -780,11 +813,46 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 - **Спонсорское упоминание.** Взнос даёт статичную строку «Поддержано [название]» здесь и на [Стене поддержавших](https://kda2210.github.io/supporters) — не баннер, не всплывающее окно, ничего внутри самого приложения.
 - **Развёртывание для организации.** Если хотите раздать проект своим сотрудникам, участникам или пользователям — можем оформить лицензию на организацию. Каждый человек по-прежнему получает его бесплатно, как и все остальные — платит организация, а не он.
-- **Финансирование конкретной фичи.** Профинансируйте конкретное дополнение — новый язык, отдельную возможность — и получите именное упоминание за этот вклад после релиза. Функция всё равно выходит бесплатно для всех.
+
+### 🎯 Финансирование конкретной фичи
+
+Профинансируйте конкретное дополнение — новый язык, отдельную возможность — и получите постоянное именное упоминание за этот вклад после релиза. Функция всё равно выходит бесплатно для всех, как и всё остальное.
+
+1. Вы предлагаете фичу или выбираете её из [дорожной карты](#ru-roadmap).
+2. Договариваемся об объёме, сроках и цене.
+3. Вы финансируете её — полностью или в складчину с другими спонсорами.
+4. Она выходит бесплатно для всех.
+5. Вы получаете упоминание «Профинансировано [название]» в changelog и здесь.
+
+Примерная цена зависит от объёма — перевод обычно стоит немного, небольшая фича больше, что-то крупное — ещё больше. Всегда обсуждается и согласуется до начала работы, никакого фиксированного прайс-листа.
+
+**Сейчас ищем спонсоров**
+
+| Фича | Статус |
+|---|---|
+| _— свободный слот —_ | _ищем спонсора_ |
+
+*(Эта таблица заполняется, только когда появляется реальная фича для финансирования — честный пустой слот лучше выдуманного процента.)*
 
 У этой конкретной страницы нет очевидного применения для организаций — это моя личная визитка, а не инструмент. Но именно здесь живёт объяснение всех принципов целиком, так что если хочется спонсировать не один конкретный проект, а всю линейку сразу — пишите сюда.
 
 Заинтересовало? **kda2210@duck.com** — укажите «Партнёрство» в теме письма.
+
+<p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
+
+---
+
+<a name="ru-roadmap"></a>
+## 🗺️ Дорожная карта
+
+*(Для каждого проекта отдельно: когда появятся реальные планы — впишите сюда 2–4 конкретные будущие фичи, чтобы спонсорам было что финансировать. Если показать пока нечего — удалите весь раздел целиком: пустая дорожная карта выглядит хуже, чем её отсутствие.)*
+
+**Принципиально не планируется:**
+- Серверные функции, из-за которых пришлось бы отказаться от офлайн-режима
+- Любая аналитика или трекинг
+- Платные уровни или премиум-функции
+
+Хотите предложить что-то своё? [Откройте issue](https://github.com/kda2210/kda2210.github.io/issues).
 
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
