@@ -213,9 +213,12 @@ Plain HTML, CSS, and JavaScript in a single file — nothing to install, build, 
 Vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. A few browser platform APIs used directly: the Web Audio API (sound), the Device Orientation API (gyroscope), and CSS custom properties with `@keyframes` for the animations.
 
 ```
-index.html          — the entire page
-fioletovyj.jpeg      — background image
-LICENSE               — MIT license (code only, see below)
+index.html              — the card itself (this page)
+supporters/index.html   — the shared Hall of Supporters page
+fioletovyj.jpeg          — background image
+docs/                     — screenshots used in this README
+LICENSE                   — MIT license (code only, see below)
+SECURITY.md               — how to report a security issue
 ```
 
 ---
@@ -659,9 +662,12 @@ kda2210.github.io — моя личная цифровая визитка: ав�
 Vanilla HTML, CSS и JavaScript — без фреймворков и сборщиков. Из платформенных API используются напрямую: Web Audio API (звук), Device Orientation API (гироскоп), CSS custom properties и `@keyframes` для анимаций.
 
 ```
-index.html          — вся страница целиком
-fioletovyj.jpeg      — фоновое изображение
-LICENSE               — лицензия MIT (только на код, см. ниже)
+index.html              — сама визитка (эта страница)
+supporters/index.html   — общая страница «Стена поддержавших»
+fioletovyj.jpeg          — фоновое изображение
+docs/                     — скриншоты, используемые в этом README
+LICENSE                   — лицензия MIT (только на код, см. ниже)
+SECURITY.md               — как сообщить о проблеме безопасности
 ```
 
 ---

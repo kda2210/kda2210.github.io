@@ -1,17 +1,30 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hall of Supporters — kda2210</title>
 <meta name="description" content="A shared record of everyone who has chosen to support kda2210's open-source projects.">
+<meta name="theme-color" content="#efeee8">
+<link rel="canonical" href="https://kda2210.github.io/supporters/">
+
+<link rel="preconnect" href="https://avatars.githubusercontent.com">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+<link rel="apple-touch-icon" sizes="300x300" href="https://avatars.githubusercontent.com/u/193797799?s=300">
+
+<meta property="og:url" content="https://kda2210.github.io/supporters/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/193797799?s=300">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hall of Supporters — kda2210">
+<meta property="og:description" content="A shared record of everyone who has chosen to support kda2210's open-source projects.">
+<meta name="twitter:card" content="summary">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#efeee8;
-    --paper-raised:#f6f5f0;
     --ink:#1c2230;
     --ink-soft:#6b6459;
     --seal:#7a2e2e;
@@ -156,8 +169,8 @@
   <div class="wrap">
     <a class="brand" href="https://kda2210.github.io">kda2210</a>
     <div class="langtoggle" role="group" aria-label="Language / Язык">
-      <button type="button" id="btn-en" aria-pressed="true">EN</button>
-      <button type="button" id="btn-ru" aria-pressed="false">RU</button>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      <button type="button" id="btn-ru" aria-pressed="true">RU</button>
     </div>
   </div>
 </header>
@@ -280,14 +293,25 @@
     var btnEn = document.getElementById('btn-en');
     var btnRu = document.getElementById('btn-ru');
 
+    var LANG_KEY = 'lang';
+
+    function getStoredLang(){
+      var stored = localStorage.getItem(LANG_KEY);
+      return (stored === 'ru' || stored === 'en') ? stored : 'ru';
+    }
+
     function setLang(lang){
       root.setAttribute('data-lang', lang);
       root.setAttribute('lang', lang);
       btnEn.setAttribute('aria-pressed', String(lang === 'en'));
       btnRu.setAttribute('aria-pressed', String(lang === 'ru'));
+      localStorage.setItem(LANG_KEY, lang);
     }
     btnEn.addEventListener('click', function(){ setLang('en'); });
     btnRu.addEventListener('click', function(){ setLang('ru'); });
+
+    // Подхватываем язык, выбранный ранее на главной странице (тот же ключ localStorage).
+    setLang(getStoredLang());
 
     // Build mailto links without hand-encoding Cyrillic.
     var EMAIL = 'kda2210@duck.com';
