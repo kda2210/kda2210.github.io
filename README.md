@@ -2,16 +2,12 @@
 
 # 🪪 kda2210.github.io
 
-<p align="center">
-  <a href="#en-top"><b>🇬🇧 English</b></a> · <a href="#ru-top">🇷🇺 Русский</a>
-</p>
-
 ---
 
 <a name="en-top"></a>
 # 🇬🇧 English
 
-*A personal digital business card — one HTML file, more craft than that usually implies.*
+*A personal digital business card in one HTML file, with more attention to detail than you might expect.*
 
 <p align="center">
 <a href="#en-about">📖 About</a> ·
@@ -48,11 +44,11 @@
 
 </details>
 
-**Most personal landing pages reach for a framework, a build step, and a handful of dependencies before they've said a single word about the person behind them.**
+**A personal page doesn't need a framework, a build process, or a long list of dependencies.**
 
-kda2210.github.io simply asks one question:
+I wanted to see how much I could build in a single HTML file without making the project harder to use or maintain.
 
-> **"How much care can fit into one HTML file?"**
+> **How much can one HTML file do?**
 
 See for yourself: **[kda2210.github.io](https://kda2210.github.io)**
 
@@ -60,11 +56,9 @@ See for yourself: **[kda2210.github.io](https://kda2210.github.io)**
 
 **Free. No ads. No subscriptions. Works offline. Open Source.**
 
-These aren't marketing slogans.
+These are the principles I use when building my projects.
 
-They're the principles behind every project I build.
-
-If you're curious why I deliberately choose this approach, this page explains both the site and the philosophy behind it.
+This page explains how they shape this site and the way I approach software.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
@@ -76,7 +70,7 @@ If you're curious why I deliberately choose this approach, this page explains bo
 
 ## 🌿 Why these principles matter
 
-I believe useful software should remain accessible to everyone. That's why every application I build follows the same handful of principles, no matter what the app itself does.
+I want the software I build to remain accessible to everyone. I follow the same principles across my projects, whatever each application is designed to do.
 
 |  | Principle | In short |
 |:---:|---|---|
@@ -95,19 +89,19 @@ You never have to pay to use my apps. Useful tools should be available regardles
 
 ### ✔️ No ads
 
-Advertisements distract, break concentration, and make software less pleasant to use. I believe an application should solve a problem — not compete for your attention.
+Ads interrupt the task at hand and make an application less pleasant to use. I prefer software that helps with a task without competing for the user's attention.
 
 ### ✔️ No subscriptions
 
-Subscriptions have become the default business model for almost everything. For small personal tools, I believe people should be able to install an app once and simply use it, without adding another monthly payment to their lives.
+For small personal tools, a subscription often feels unnecessary. I want people to be able to install an app and keep using it without taking on another monthly payment.
 
 ### ✔️ Works offline
 
-That's why my applications are designed so all core features work completely offline: no server dependency, faster performance, better privacy, use the app anywhere. *On this particular page, the very first visit still needs a connection to load the Google Fonts typeface and the avatar image — once your browser has cached them, everything keeps working without one.*
+I design my applications so their core features work without an internet connection. That removes the need for a server, improves privacy, and makes the apps usable in more places. *This page is a small exception on the first visit: it needs a connection to load the Google Fonts typeface and avatar image. Once your browser has cached them, the page works offline.*
 
 ### ✔️ Open Source from day one
 
-Every project is open source from day one, so you can see exactly how it works, verify there are no hidden mechanisms, learn from the code, contribute, and know the project can keep existing long after I stop maintaining it.
+I publish each project as open source from the start. You can inspect the code, see how the application works, check for hidden behaviour, and contribute. The code also remains available if I stop maintaining the project.
 
 </details>
 
@@ -118,9 +112,9 @@ Every project is open source from day one, so you can see exactly how it works, 
 <a name="en-about"></a>
 ## 📖 About
 
-kda2210.github.io is my personal digital business card: an avatar, a short line about me, and ways to reach me. It's a single static HTML file — no build step, no dependencies — but with more attention to detail than that description usually implies: an ambient light that follows your cursor or finger and slowly drifts on its own when you're not touching anything, a card that responds when you tilt your phone, and a few smaller touches most one-file pages skip entirely.
+kda2210.github.io is my personal digital business card. It contains an avatar, a short description, and links for getting in touch. The page is a single static HTML file with no build step or external dependencies. It also has a few details that take more work than the file size suggests: a soft light that follows the cursor or finger and moves slowly when left alone, a card that reacts to the phone's orientation, and a few smaller touches.
 
-It isn't trying to be a template or a starter kit — it's simply the page I use for myself, published because there was no reason to keep it closed.
+I made the page for my own use. I published it so others can see how it works and use the code as a reference if they find it helpful.
 
 ---
 
@@ -141,7 +135,7 @@ It isn't trying to be a template or a starter kit — it's simply the page I use
 
 </details>
 
-*A short GIF would show it even better — the ambient light and gyroscope parallax are motion, not layout. That's still coming.*
+*A short GIF would show the ambient light and the phone-tilt effect better than a still image. I'll add one later.*
 
 ---
 
@@ -150,7 +144,7 @@ It isn't trying to be a template or a starter kit — it's simply the page I use
 
 Live: **[kda2210.github.io](https://kda2210.github.io)**
 
-Or run it locally — clone the repo and open `index.html` in a browser. Nothing to install, nothing to build.
+To run it locally, clone the repository and open `index.html` in a browser. There's nothing to install or build.
 
 ---
 
@@ -159,37 +153,37 @@ Or run it locally — clone the repo and open `index.html` in a browser. Nothing
 
 ### 🌍 RU / EN
 
-A language switch that remembers your choice between visits.
+The page remembers your language choice between visits.
 
 ---
 
 ### 💡 Ambient light
 
-A soft light follows your cursor or finger; when you're not moving it, it drifts slowly on its own.
+A soft light follows the cursor or your finger. When you stop moving, it slowly drifts on its own.
 
 ---
 
 ### 📱 Gyroscope on mobile
 
-Tilt your phone and the background, the light, and the card itself all respond — a small parallax effect, in the smallest amount of code that could produce it.
+When you tilt your phone, the background, light, and card respond with a subtle parallax effect.
 
 ---
 
 ### 📇 Save contact
 
-Generates a vCard right in the browser, no server involved.
+Creates a vCard in the browser without sending anything to a server.
 
 ---
 
 ### 🕐 Live clock
 
-Shows the owner's local time, always current.
+Displays the owner's current local time.
 
 ---
 
 ### ♿ Respects `prefers-reduced-motion`
 
-Every animation switches off cleanly for anyone who'd rather not see them.
+Animations are disabled for visitors who have enabled this setting in their system preferences.
 
 ---
 
@@ -201,7 +195,7 @@ Not telling. Find it yourself.
 
 ### 🪶 Zero dependencies
 
-Plain HTML, CSS, and JavaScript in a single file — nothing to install, build, or keep updated.
+The page uses HTML, CSS, and JavaScript in one file, with no external dependencies to install or update.
 
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
@@ -210,7 +204,7 @@ Plain HTML, CSS, and JavaScript in a single file — nothing to install, build, 
 <a name="en-built-with"></a>
 ## 🛠️ Built with
 
-Vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. A few browser platform APIs used directly: the Web Audio API (sound), the Device Orientation API (gyroscope), and CSS custom properties with `@keyframes` for the animations.
+The page is built with HTML, CSS, and JavaScript, without frameworks or build tools. It uses a few browser APIs directly: the Web Audio API for sound and the Device Orientation API for the gyroscope. The animations use CSS custom properties and `@keyframes`.
 
 ```
 index.html              — the card itself (this page)
@@ -226,7 +220,7 @@ SECURITY.md               — how to report a security issue
 <a name="en-fork"></a>
 ## 🍴 Want to build your own?
 
-The code is open — fork it and make it yours. The main things worth changing:
+The code is open, so you can create your own version. The main things to change are:
 
 - the Telegram / email / VK / phone links
 - the avatar and background image
@@ -239,7 +233,7 @@ The code is open — fork it and make it yours. The main things worth changing:
 <a name="en-security"></a>
 ## 🔐 Security
 
-Found something that looks like an actual security issue — not just "you could minify this CSS"? See [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md) rather than opening a public issue.
+If you've found a genuine security issue, please follow the instructions in [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md) instead of reporting it in a public issue.
 
 ---
 
@@ -250,7 +244,7 @@ Found something that looks like an actual security issue — not just "you could
 <summary><b>Why not React / a static site generator / some build tool?</b></summary>
 <br>
 
-A landing page someone looks at for five seconds doesn't need a build pipeline. One file is easier to read, easier to trust, and easier to fork.
+A small personal page doesn't need a build pipeline. Keeping it in one file makes the code easier to read, inspect, and reuse.
 
 </details>
 
@@ -258,7 +252,7 @@ A landing page someone looks at for five seconds doesn't need a build pipeline. 
 <summary><b>Can I use your photo or contact details if I fork this?</b></summary>
 <br>
 
-No — see the note in [License](#en-license). Swap them for your own; that's the whole point of forking it.
+No — see the note in [License](#en-license). Swap them for your own, that's the whole point of forking it.
 
 </details>
 
@@ -266,7 +260,7 @@ No — see the note in [License](#en-license). Swap them for your own; that's th
 <summary><b>Does it track or analyze visitors?</b></summary>
 <br>
 
-No analytics, no cookies, no tracking of any kind. It's a static file — nobody's watching who opens it.
+There are no analytics, cookies, or other visitor-tracking tools. The page is static and does not record who opens it.
 
 </details>
 
@@ -287,7 +281,7 @@ No analytics, no cookies, no tracking of any kind. It's a static file — nobody
 
 Released under the MIT License — for the code.
 
-Use it. Study it. Fork it. Build your own version.
+Use the code, study it, and build your own version.
 
 **One exception:** the personal content in this repository — the photo, phone number, email, and social links — isn't covered by that license. That's not code, it's one specific person's contact information, and there's no reason for anyone but me to reuse it. If you fork this, swap it all out for your own — see [Want to build your own?](#en-fork).
 
@@ -295,12 +289,7 @@ Use it. Study it. Fork it. Build your own version.
 
 ## ❤️ Why I keep building
 
-Creating applications like this takes a great deal of time. I keep doing it because I genuinely enjoy building tools that make everyday life a little better.
-
-If my projects help people, voluntary support lets me spend more time improving existing apps and building new ones. None of it changes how the apps work, for anyone.
-
-> [!NOTE]
-> Support is entirely optional, and the amount is entirely up to you — there's no suggested figure, and no amount is "too small." It doesn't unlock any features, and it changes nothing about how the apps work. It's simply a way of saying **"thank you." ❤️**
+Building and maintaining applications takes time. I do it because I enjoy making tools that can be useful in everyday life.
 
 If even one of my applications has been useful to you, then all the hours spent building it were worth it. Thank you for using my projects.
 
@@ -309,7 +298,7 @@ If even one of my applications has been useful to you, then all the hours spent 
 <a name="en-support"></a>
 ## ❤️ Voluntary Support
 
-If you'd like to support the development of current and future projects, pick whatever's easiest for you. The amount is always yours to choose.
+Voluntary contributions help me spend more time improving existing projects and working on new ones. Choose whichever method is most convenient. The amount is up to you, and no amount is too small. Contributions do not unlock features or change how the apps work.
 
 <details>
 <summary><b>💳 Show all ways to support</b></summary>
@@ -320,6 +309,7 @@ If you'd like to support the development of current and future projects, pick wh
 
 <p align="left">
 <a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-One--time%20card-0a84ff" alt="CloudTips"></a>
+<a href="https://yoomoney.ru/to/4100119409642062"><img src="https://img.shields.io/badge/YooMoney-One--time%20transfer-8b3ffd" alt="YooMoney"></a>
 </p>
 
 **Ongoing — monthly support**
@@ -328,7 +318,7 @@ If you'd like to support the development of current and future projects, pick wh
 <a href="https://boosty.to/kda2210"><img src="https://img.shields.io/badge/Boosty-Monthly%20support-f15f2c" alt="Boosty"></a>
 </p>
 
-*Called "monthly support," not a subscription — same as a one-time donation, it unlocks nothing and can be cancelled anytime.*
+*This is monthly support, not a subscription, and can be stopped at any time.*
 
 **Crypto**
 
@@ -373,7 +363,7 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 </details>
 
-**[Hall of Supporters](https://kda2210.github.io/supporters)** — a shared thank-you page across all of my projects. Being listed there is entirely opt-in and off by default: supporting a project never adds your name anywhere unless you explicitly ask for it.
+**[Hall of Supporters](https://kda2210.github.io/supporters)** is a shared thank-you page for my projects. Names are added only with explicit permission. Supporting a project never adds your name automatically.
 
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
@@ -460,21 +450,22 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 ---
 
 <a name="ru-top"></a>
+
 # 🇷🇺 Русский
 
-*Личная цифровая визитка — один HTML-файл и куда больше внимания к деталям, чем можно ожидать.*
+*Личная цифровая визитка в одном HTML-файле. В ней больше внимания к деталям, чем можно ожидать от такой небольшой страницы.*
 
 <p align="center">
 <a href="#ru-about">📖 О проекте</a> ·
-<a href="#ru-try">🔗 Посмотреть</a> ·
-<a href="#ru-features">✨ Функции</a> ·
+<a href="#ru-try">🔗 Открыть страницу</a> ·
+<a href="#ru-features">✨ Возможности</a> ·
 <a href="#ru-license">📄 Лицензия</a> ·
 <a href="#ru-support"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-e25555" alt="Поддержать проект"></a> ·
 <a href="#ru-partners">🏛️ Партнёрам</a> ·
 <!-- ROADMAP TOGGLE (nav): удалите эту пару комментариев, чтобы показать ссылку для проекта с дорожной картой
 <a href="#ru-roadmap">🗺️ Планы</a> ·
 -->
-<a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Баги</a> ·
+<a href="https://github.com/kda2210/kda2210.github.io/issues">🐛 Сообщить о проблеме</a> ·
 <a href="#en-top">🇬🇧 EN</a>
 </p>
 
@@ -483,39 +474,35 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 
 - [О проекте](#ru-about)
 - [Скриншоты](#ru-screenshots)
-- [Посмотреть](#ru-try)
-- [Функции](#ru-features)
+- [Открыть страницу](#ru-try)
+- [Возможности](#ru-features)
 - [Технологии](#ru-built-with)
-- [Хочешь сделать себе такую же?](#ru-fork)
+- [Как создать свою версию](#ru-fork)
 - [Безопасность](#ru-security)
-- [FAQ](#ru-faq)
+- [Вопросы и ответы](#ru-faq)
 - [Лицензия](#ru-license)
 - [Поддержка](#ru-support)
 - [Организациям и партнёрам](#ru-partners)
 <!-- ROADMAP TOGGLE (toc): удалите эту пару комментариев, чтобы показать пункт для проекта с дорожной картой
-- [Дорожная карта](#ru-roadmap)
+- [Планы развития](#ru-roadmap)
 -->
-- 🐛 [Сообщить об ошибке](https://github.com/kda2210/kda2210.github.io/issues) ↗
+- 🐛 [Сообщить о проблеме](https://github.com/kda2210/kda2210.github.io/issues) ↗
 
 </details>
 
-**Большинство личных лендингов первым делом тянут за собой фреймворк, сборку и десяток зависимостей — ещё до того, как скажут хоть слово о человеке за ними.**
+**Для личной страницы не обязательно использовать фреймворк, систему сборки и множество сторонних библиотек.**
 
-kda2210.github.io просто отвечает на один вопрос:
+Я решил проверить, что можно сделать в одном HTML-файле, не усложняя проект без необходимости.
 
-> **«Сколько внимания к деталям поместится в один HTML-файл?»**
+> **Сколько всего может один HTML-файл?**
 
-Посмотреть можно здесь: **[kda2210.github.io](https://kda2210.github.io)**
+Посмотреть результат можно здесь: **[kda2210.github.io](https://kda2210.github.io)**
 
 ---
 
-**Бесплатно. Без рекламы. Без подписок. Работает офлайн. Открытый код.**
+**Бесплатно. Без рекламы. Без подписок. Работает без интернета. Открытый исходный код.**
 
-Это не рекламные лозунги.
-
-Это принципы, которым я следую в каждом своём проекте.
-
-Если вам интересно, почему я осознанно выбираю именно такой подход — эта страница объясняет и саму страницу, и философию за ней.
+Эти принципы лежат в основе моих проектов. На этой странице я рассказываю о самой визитке и о том, почему выбрал именно такой подход.
 
 [![Лицензия: MIT](https://img.shields.io/badge/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Открытый код](https://img.shields.io/badge/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%B4-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
@@ -525,40 +512,40 @@ kda2210.github.io просто отвечает на один вопрос:
 
 ---
 
-## 🌿 Почему эти принципы важны
+## 🌿 Почему я придерживаюсь этих принципов
 
-Я считаю, что полезные программы должны оставаться доступными каждому. Поэтому все мои приложения следуют одним и тем же принципам — независимо от того, что делает конкретная программа.
+Я хочу, чтобы полезные программы оставались доступными каждому. Поэтому в своих проектах я придерживаюсь нескольких общих правил — независимо от назначения конкретного приложения.
 
-|  | Принцип | Коротко |
+|  | Принцип | Что это значит |
 |:---:|---|---|
-| 💸 | **Бесплатно** | Вы никогда не платите за использование. |
-| 🚫 | **Без рекламы** | Ничто не отвлекает и не борется за ваше внимание. |
-| 🔁 | **Без подписок** | Установили один раз — пользуетесь сколько угодно. |
-| 📴 | **Работает офлайн** | Ни одного сервера — ничего не покидает устройство. |
-| 🔓 | **Открытый код** | Ничего не скрыто. Читайте, проверяйте, дорабатывайте. |
+| 💸 | **Бесплатно** | За использование не нужно платить. |
+| 🚫 | **Без рекламы** | Ничто не отвлекает от работы с приложением. |
+| 🔁 | **Без подписок** | Установили один раз и пользуетесь сколько угодно. |
+| 📴 | **Работа без интернета** | Приложению не нужен сервер, данные не покидают устройство. |
+| 🔓 | **Открытый исходный код** | Код доступен для просмотра, проверки и доработки. |
 
 <details>
 <summary><b>Подробнее о каждом принципе</b></summary>
 
 ### ✔️ Бесплатно
 
-Вам никогда не придётся платить за использование моих приложений. Полезные инструменты должны быть доступны независимо от финансового положения человека.
+За использование моих приложений не нужно платить. Я считаю, что полезные инструменты должны быть доступны независимо от финансовых возможностей человека.
 
 ### ✔️ Без рекламы
 
-Реклама отвлекает, сбивает концентрацию и делает использование программы менее приятным. Я считаю, что приложение должно решать задачу, а не бороться за ваше внимание.
+Реклама отвлекает и мешает сосредоточиться. Мне ближе приложения, которые помогают решить задачу и не борются за внимание пользователя.
 
 ### ✔️ Без подписок
 
-Для небольших личных инструментов я считаю, что человек должен иметь возможность один раз установить приложение и просто пользоваться им — не добавляя себе ещё один ежемесячный платёж.
+Для небольших личных инструментов ежемесячная плата кажется мне лишней. Я хочу, чтобы человек мог установить приложение и пользоваться им без ещё одного регулярного платежа.
 
-### ✔️ Работает офлайн
+### ✔️ Работа без интернета
 
-Поэтому все мои приложения спроектированы так, чтобы все основные функции работали полностью офлайн: никакой зависимости от сервера, выше скорость, больше приватности, можно пользоваться где угодно. *На этой конкретной странице первый заход всё же требует соединения — чтобы подгрузить шрифт Google Fonts и аватар; после того как браузер их закэширует, всё продолжает работать без сети.*
+Основные возможности моих приложений работают без подключения к серверу. Это упрощает работу программы, помогает сохранить конфиденциальность и позволяет пользоваться ею в разных местах. *У этой страницы есть небольшое исключение: при первом открытии требуется интернет, чтобы загрузить шрифт Google Fonts и изображение аватара. После сохранения этих файлов в кэше браузера страница работает без сети.*
 
-### ✔️ Открытый код с первого дня
+### ✔️ Открытый исходный код с самого начала
 
-Каждый проект открыт с самого начала — вы можете увидеть, как устроено приложение, убедиться, что в нём нет скрытых механизмов, изучать код, вносить улучшения и быть уверены, что проект сможет жить дальше, даже если я перестану его поддерживать.
+Код каждого проекта доступен с самого начала. Можно разобраться, как устроено приложение, проверить его работу, предложить улучшения или использовать код в качестве основы для своей разработки. Даже если я перестану заниматься проектом, его исходный код останется доступен.
 
 </details>
 
@@ -569,9 +556,11 @@ kda2210.github.io просто отвечает на один вопрос:
 <a name="ru-about"></a>
 ## 📖 О проекте
 
-kda2210.github.io — моя личная цифровая визитка: аватар, короткая подпись и способы связи. Это один статический HTML-файл — без сборки, без зависимостей — но с куда большим вниманием к деталям, чем обычно подразумевает такое описание: мягкая подсветка следует за курсором или пальцем и медленно дрейфует сама, когда её не трогаешь, карточка реагирует на наклон телефона, и есть ещё несколько мелочей, которые в странице из одного файла обычно просто не делают.
+kda2210.github.io — моя личная цифровая визитка. На ней есть аватар, короткое описание и способы связаться со мной. Вся страница размещена в одном статическом HTML-файле: без этапа сборки и сторонних зависимостей.
 
-Это не попытка сделать шаблон или стартовый набор — это просто страница, которой я пользуюсь сам, и опубликована она потому, что не было причин держать её закрытой.
+Несмотря на простую основу, в ней есть несколько дополнительных деталей. Мягкое световое пятно следует за курсором или пальцем, а когда его не перемещают — медленно движется само. Карточка реагирует на наклон телефона. Есть и другие небольшие элементы, которые редко встречаются на настолько простых страницах.
+
+Я сделал эту страницу для себя. Потом решил опубликовать её, чтобы другие могли посмотреть, как она устроена, и при желании использовать код в своих проектах.
 
 ---
 
@@ -584,138 +573,138 @@ kda2210.github.io — моя личная цифровая визитка: ав�
 
 <p align="center">
   <a href="docs/Screenshot_20260909-142540.webp" target="_blank">
-    <img src="docs/Screenshot_20260909-142540.webp" width="220" alt="Превью визитки">
+    <img src="docs/Screenshot_20260909-142540.webp" width="220" alt="Предварительный вид визитки">
   </a>
 </p>
 
-<p align="center"><sub>Нажмите на скриншот, чтобы открыть в полном размере</sub></p>
+<p align="center"><sub>Нажмите на изображение, чтобы открыть его полностью</sub></p>
 
 </details>
 
 ---
 
 <a name="ru-try"></a>
-## 🔗 Посмотреть
+## 🔗 Открыть страницу
 
-Онлайн: **[kda2210.github.io](https://kda2210.github.io)**
+Сайт: **[kda2210.github.io](https://kda2210.github.io)**
 
-Или локально — клонируйте репозиторий и откройте `index.html` в браузере. Собирать и устанавливать ничего не нужно.
+Чтобы открыть страницу на своём компьютере, скачайте копию репозитория и запустите `index.html` в браузере. Устанавливать дополнительные программы или собирать проект не нужно.
 
 ---
 
 <a name="ru-features"></a>
-## ✨ Функции
+## ✨ Возможности
 
-### 🌍 RU / EN
+### 🌍 Русский и английский языки
 
-Переключение языка с запоминанием выбора между визитами.
+Переключатель языка запоминает ваш выбор и использует его при следующем посещении.
 
 ---
 
 ### 💡 Динамическая подсветка
 
-Мягкий свет следует за курсором или пальцем; в покое медленно дрейфует сам.
+Мягкое световое пятно следует за курсором или пальцем. Когда вы перестаёте двигать ими, подсветка медленно перемещается сама.
 
 ---
 
-### 📱 Гироскоп на мобильных
+### 📱 Гироскоп на телефоне
 
-При наклоне телефона реагируют фон, подсветка и сама карточка — небольшой параллакс-эффект, реализованный минимальным количеством кода.
-
----
-
-### 📇 Сохранить контакт
-
-Генерация vCard прямо в браузере, без сервера.
+При наклоне телефона меняется положение фона, подсветки и самой карточки. Получается небольшой эффект смещения, для которого не понадобилось много кода.
 
 ---
 
-### 🕐 Живые часы
+### 📇 Сохранение контакта
 
-Показывают местное время владельца, всегда актуальное.
+Страница создаёт файл контакта в формате vCard прямо в браузере. Сервер для этого не используется.
 
 ---
 
-### ♿ Полная поддержка `prefers-reduced-motion`
+### 🕐 Текущее время
 
-Все анимации корректно отключаются для тех, кто не хочет их видеть.
+Показывает местное время владельца страницы.
+
+---
+
+### ♿ Учитывает настройку `prefers-reduced-motion`
+
+Если в системе включено уменьшение движения, анимации отключаются.
 
 ---
 
 ### 👀 Скрытая пасхалка
 
-Не скажу. Найдите сами.
+Не буду раскрывать. Попробуйте найти сами.
 
 ---
 
-### 🪶 Ноль зависимостей
+### 🪶 Без сторонних зависимостей
 
-Чистые HTML, CSS и JavaScript в одном файле — ничего не нужно устанавливать, собирать или обновлять.
+Вся страница написана на HTML, CSS и JavaScript и находится в одном файле. Ничего дополнительно устанавливать, собирать или обновлять не нужно.
 
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
 ---
 
 <a name="ru-built-with"></a>
-## 🛠️ Технологии
+## 🛠️ Используемые технологии
 
-Vanilla HTML, CSS и JavaScript — без фреймворков и сборщиков. Из платформенных API используются напрямую: Web Audio API (звук), Device Orientation API (гироскоп), CSS custom properties и `@keyframes` для анимаций.
+Страница написана на HTML, CSS и JavaScript — без фреймворков и инструментов сборки. Напрямую используются несколько API браузера: Web Audio API для звука и Device Orientation API для работы с гироскопом. Для анимаций применяются пользовательские свойства CSS и `@keyframes`.
 
 ```
 index.html              — сама визитка (эта страница)
 supporters/index.html   — общая страница «Стена поддержавших»
 fioletovyj.jpeg          — фоновое изображение
-docs/                     — скриншоты, используемые в этом README
+docs/                     — папка со скриншотами для README.md
 LICENSE                   — лицензия MIT (только на код, см. ниже)
-SECURITY.md               — как сообщить о проблеме безопасности
+SECURITY.md               — инструкция по сообщению о проблемах безопасности
 ```
 
 ---
 
 <a name="ru-fork"></a>
-## 🍴 Хочешь сделать себе такую же?
+## 🍴 Как создать свою версию
 
-Код открыт, можно форкнуть и подстроить под себя. Основное, что стоит поменять:
+Код открыт — вы можете создать копию проекта и изменить её под себя. В первую очередь стоит заменить:
 
-- ссылки на Telegram / почту / VK / телефон
-- аватар и фоновое изображение
-- часовой пояс в переменной `TIMEZONE`
-- данные в генераторе vCard
-- фразу-девиз и текст под ней
+- ссылки на Telegram, почту, VK и номер телефона;
+- аватар и фоновое изображение;
+- часовой пояс в переменной `TIMEZONE`;
+- данные, которые используются при создании файла vCard;
+- короткую фразу о владельце и текст под ней.
 
 ---
 
 <a name="ru-security"></a>
 ## 🔐 Безопасность
 
-Нашли что-то похожее на настоящую проблему безопасности — не просто «можно было бы минифицировать CSS»? См. [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md), а не публичный issue.
+Если вы нашли настоящую проблему безопасности, действуйте по инструкции в [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md) и не пишите о ней в публичном issue.
 
 ---
 
 <a name="ru-faq"></a>
-## ❓ FAQ
+## ❓ Вопросы и ответы
 
 <details>
-<summary><b>Почему не React / генератор статики / хоть какая-то сборка?</b></summary>
+<summary><b>Почему не React, генератор статических сайтов или система сборки?</b></summary>
 <br>
 
-Лендинг, на который смотрят пять секунд, не нуждается в сборочном пайплайне. Один файл проще прочитать, проще проверить и проще форкнуть.
+Для небольшой личной страницы, которую обычно открывают на несколько секунд, сложная сборка не нужна. Один файл проще читать, проверять и брать за основу для собственной версии.
 
 </details>
 
 <details>
-<summary><b>Можно использовать твоё фото или контакты, если я форкну репозиторий?</b></summary>
+<summary><b>Можно ли использовать твою фотографию или контакты в своей копии проекта?</b></summary>
 <br>
 
-Нет — см. примечание в разделе [Лицензия](#ru-license). Замените на свои — в этом весь смысл форка.
+Нет. Подробнее об этом написано в разделе [«Лицензия»](#ru-license). Замените фотографию и контактные данные своими — для этого и предназначена копия проекта.
 
 </details>
 
 <details>
-<summary><b>Есть отслеживание или аналитика посетителей?</b></summary>
+<summary><b>Страница собирает сведения о посетителях?</b></summary>
 <br>
 
-Никакой аналитики, куки или трекинга. Это статичный файл — никто не следит, кто его открывает.
+Нет. Здесь нет аналитики, файлов cookie и других средств отслеживания. Страница статическая и не записывает, кто её открывает.
 
 </details>
 
@@ -734,50 +723,46 @@ SECURITY.md               — как сообщить о проблеме без
 <a name="ru-license"></a>
 ## 📄 Лицензия
 
-Код распространяется под лицензией MIT.
+Исходный код распространяется по лицензии MIT.
 
-Используйте. Изучайте. Форкайте. Делайте свою версию.
+Используйте его, изучайте и создавайте на его основе собственные проекты.
 
-**Одно исключение:** личные данные в этом репозитории — фото, номер телефона, почта, ссылки на соцсети — этой лицензией не покрываются. Это не код, а контактные данные конкретного человека, и смысла переиспользовать их кому-то, кроме меня, нет. Если форкаете — замените всё на своё, см. [«Хочешь сделать себе такую же?»](#ru-fork).
+**Важное исключение:** лицензия не распространяется на личные материалы в этом репозитории — фотографию, номер телефона, адрес электронной почты и ссылки на социальные сети. Это контактные данные конкретного человека, а не часть исходного кода. При создании своей версии замените их собственными. Подробнее — в разделе [«Как создать свою версию»](#ru-fork).
 
 ---
 
-## ❤️ Почему я продолжаю это делать
+## ❤️ Почему я продолжаю этим заниматься
 
-Разработка таких приложений отнимает очень много времени. Я продолжаю этим заниматься, потому что мне искренне нравится создавать инструменты, которые делают повседневную жизнь немного лучше.
+Разработка и поддержка таких приложений требуют времени. Я продолжаю этим заниматься, потому что мне нравится создавать полезные инструменты, которые упрощают повседневные задачи.
 
-Если мои проекты кому-то помогают, добровольная поддержка позволяет мне уделять больше времени доработке существующих приложений и созданию новых. Это никак не меняет, как работают приложения — ни для кого.
-
-> [!NOTE]
-> Поддержка полностью добровольна, а сумму вы выбираете сами — нет ни рекомендованной суммы, ни «слишком маленького» вклада. Она не открывает никаких дополнительных функций и никак не меняет работу приложений — это просто способ сказать **«спасибо». ❤️**
-
-Если хотя бы одно из моих приложений оказалось вам полезным — значит, все часы, потраченные на его создание, того стоили. Спасибо, что пользуетесь моими проектами.
+Если хотя бы одно из моих приложений оказалось вам полезным, значит, время, потраченное на его создание, прошло не зря. Спасибо, что пользуетесь моими проектами.
 
 ---
 
 <a name="ru-support"></a>
 ## ❤️ Добровольная поддержка
 
-Если хотите поддержать разработку текущих и будущих проектов — выберите любой удобный для вас способ. Сумму всегда выбираете вы.
+Добровольные взносы помогают мне уделять больше времени развитию существующих приложений и работе над новыми. Выберите удобный способ. Сумму выбираете вы, и «слишком маленькой» суммы не бывает. Поддержка не открывает дополнительных возможностей и не меняет работу приложений.
 
 <details>
 <summary><b>💳 Показать все способы поддержки</b></summary>
 
 <br>
 
-**Разово — оплата картой (Россия)**
+**Разовый перевод с карты (Россия)**
 
 <p align="left">
 <a href="https://pay.cloudtips.ru/p/89752366"><img src="https://img.shields.io/badge/CloudTips-%D0%A0%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B0-0a84ff" alt="CloudTips"></a>
+<a href="https://yoomoney.ru/to/4100119409642062"><img src="https://img.shields.io/badge/%D0%AEMoney-%D0%A0%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-8b3ffd" alt="ЮMoney"></a>
 </p>
 
-**Регулярно — ежемесячная поддержка**
+**Регулярная ежемесячная поддержка**
 
 <p align="left">
 <a href="https://boosty.to/kda2210"><img src="https://img.shields.io/badge/Boosty-%D0%95%D0%B6%D0%B5%D0%BC%D0%B5%D1%81%D1%8F%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-f15f2c" alt="Boosty"></a>
 </p>
 
-*Это «ежемесячная поддержка», не подписка — как и разовый донат, она ничего не открывает и её можно остановить в любой момент.*
+*Это ежемесячная поддержка, а не подписка, её можно прекратить в любой момент.*
 
 **Криптовалюта**
 
@@ -816,13 +801,13 @@ r3e3iyezjaGAsB64aNEfGDgrPYmachHZyc
 GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ```
 
-**Другой способ?**
+**Другой способ**
 
 ✉️ kda2210@duck.com
 
 </details>
 
-**[Стена поддержавших](https://kda2210.github.io/supporters)** — общая страница благодарности для всех моих проектов. Попадание туда — только по явному согласию и по умолчанию выключено: поддержка проекта сама по себе никогда никуда не добавляет ваше имя.
+**[Стена поддержавших](https://kda2210.github.io/supporters)** — общая страница благодарности для всех моих проектов. Имя появляется на ней только с согласия самого человека. Сам факт поддержки не добавляет имя автоматически.
 
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
@@ -831,36 +816,36 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 <a name="ru-partners"></a>
 ## 🏛️ Организациям и партнёрам
 
-Всё написанное выше — про частных пользователей, и здесь ничего не меняется: проект остаётся на 100% бесплатным, без рекламы и полностью рабочим для любого, кто его скачает. Этот раздел не добавляет платный уровень — он просто описывает другой тип поддержки.
+Всё, что описано выше, относится к частным пользователям. Для них проект по-прежнему полностью бесплатный, без рекламы и доступен со всеми возможностями. Этот раздел не вводит платную версию — здесь описаны способы, которыми организации могут поддержать разработку.
 
-Организации — компании, фонды, работодатели, НКО — иногда хотят поддержать эту работу способом, недоступным частному человеку, или показать проект сразу большой группе людей. Вот как это может выглядеть:
+Компании, фонды, работодатели и некоммерческие организации иногда хотят поддержать проект или предоставить его сразу большой группе людей. Это можно сделать несколькими способами:
 
-- **Спонсорское упоминание.** Взнос даёт статичную строку «Поддержано [название]» здесь и на [Стене поддержавших](https://kda2210.github.io/supporters) — не баннер, не всплывающее окно, ничего внутри самого приложения.
-- **Развёртывание для организации.** Если хотите раздать проект своим сотрудникам, участникам или пользователям — можем оформить лицензию на организацию. Каждый человек по-прежнему получает его бесплатно, как и все остальные — платит организация, а не он.
+- **Упоминание спонсора.** После взноса здесь и на странице [«Стена поддержавших»](https://kda2210.github.io/supporters) появляется строка «Поддержано [название]». Это будет обычный текст — без баннеров, всплывающих окон и рекламы внутри приложения.
+- **Использование в организации.** Если вы хотите распространить проект среди сотрудников, участников или пользователей своей организации, можно отдельно обсудить лицензию для организации. Каждый человек по-прежнему будет пользоваться бесплатной полной версией, оплату берёт на себя организация.
 
-### 🎯 Финансирование конкретной фичи
+### 🎯 Финансирование отдельной функции
 
-Профинансируйте конкретное дополнение — новый язык, отдельную возможность — и получите постоянное именное упоминание за этот вклад после релиза. Функция всё равно выходит бесплатно для всех, как и всё остальное.
+Можно профинансировать конкретное улучшение — например, добавить новый язык или отдельную возможность. После выпуска ваше участие будет отмечено в проекте. Сама функция при этом останется бесплатной для всех.
 
-1. Вы предлагаете фичу — или, если для этого проекта ведётся дорожная карта, выбираете её оттуда.
-2. Договариваемся об объёме, сроках и цене.
-3. Вы финансируете её — полностью или в складчину с другими спонсорами.
-4. Она выходит бесплатно для всех.
-5. Вы получаете упоминание «Профинансировано [название]» в changelog и здесь.
+1. Вы предлагаете улучшение или выбираете его из опубликованных планов, если они есть у проекта.
+2. Мы согласуем объём работы, сроки и стоимость.
+3. Вы оплачиваете работу полностью или делите расходы с другими спонсорами.
+4. Готовая функция выходит для всех пользователей бесплатно.
+5. Ваш вклад отмечается в журнале изменений и на этой странице.
 
-Примерная цена зависит от объёма — перевод обычно стоит немного, небольшая фича больше, что-то крупное — ещё больше. Всегда обсуждается и согласуется до начала работы, никакого фиксированного прайс-листа.
+Стоимость зависит от объёма работы. Перевод может обойтись в несколько сотен долларов, небольшое улучшение будет стоить дороже, а крупная доработка — ещё больше. Цена всегда обсуждается и согласуется до начала работы, постоянного прайс-листа нет.
 
 **Сейчас ищем спонсоров**
 
-| Фича | Статус |
+| Функция | Статус |
 |---|---|
-| _— свободный слот —_ | _ищем спонсора_ |
+| _— свободное место —_ | _ищем спонсора_ |
 
-*(Эта таблица заполняется, только когда появляется реальная фича для финансирования — честный пустой слот лучше выдуманного процента.)*
+*(Здесь появляются только реальные задачи, для которых действительно нужен спонсор. Лучше оставить таблицу пустой, чем указывать выдуманные показатели.)*
 
-У этой конкретной страницы нет очевидного применения для организаций — это моя личная визитка, а не инструмент. Но именно здесь живёт объяснение всех принципов целиком, так что если хочется спонсировать не один конкретный проект, а всю линейку сразу — пишите сюда.
+У этой страницы самой по себе нет очевидного применения в организации — это моя личная визитка, а не рабочий инструмент. Но здесь собраны принципы, которыми я руководствуюсь во всех проектах. Поэтому, если вы хотите поддержать не одну отдельную программу, а всю мою работу, можете написать по адресу ниже.
 
-Заинтересовало? **kda2210@duck.com** — укажите «Партнёрство» в теме письма.
+Заинтересовало? **kda2210@duck.com** — укажите в теме письма «Партнёрство».
 
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
@@ -869,16 +854,16 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 <!-- ROADMAP TOGGLE (section): удалите эту пару комментариев для проекта, где есть реальная дорожная карта
 
 <a name="ru-roadmap"></a>
-## 🗺️ Дорожная карта
+## 🗺️ Планы развития
 
-*(Для каждого проекта отдельно: когда появятся реальные планы — впишите сюда 2–4 конкретные будущие фичи, чтобы спонсорам было что финансировать. Если показать пока нечего — удалите весь раздел целиком: пустая дорожная карта выглядит хуже, чем её отсутствие.)*
+*(Для каждого проекта отдельно: добавьте сюда 2–4 конкретных предстоящих улучшения, когда появятся реальные планы и задачи для спонсоров. Если пока нечего указать, лучше удалить весь раздел.)*
 
-**Принципиально не планируется:**
-- Серверные функции, из-за которых пришлось бы отказаться от офлайн-режима
-- Любая аналитика или трекинг
-- Платные уровни или премиум-функции
+**Чего не будет по принципиальным соображениям:**
+- Серверных функций, для которых пришлось бы отказаться от работы без интернета
+- Аналитики и любых средств отслеживания
+- Платных уровней и дополнительных платных возможностей
 
-Хотите предложить что-то своё? [Откройте issue](https://github.com/kda2210/kda2210.github.io/issues).
+Есть предложение? [Откройте issue](https://github.com/kda2210/kda2210.github.io/issues).
 
 <p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
 
@@ -887,10 +872,10 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 -->
 
 <details>
-<summary><b>«Бесплатно» всё ещё действует, если платит моя организация?</b></summary>
+<summary><b>Остаётся ли проект бесплатным, если платит организация?</b></summary>
 <br>
 
-Да. Лицензия для организации оплачивает развёртывание в масштабе — она никогда не включает и не выключает функции для кого-либо. Каждый человек получает одну и ту же бесплатную полную версию — нашёл он проект сам или получил через организацию.
+Да. Организационная лицензия нужна для распространения проекта среди большого числа пользователей. Она не включает и не отключает отдельные возможности. Каждый человек получает одну и ту же полную бесплатную версию — независимо от того, нашёл он проект самостоятельно или получил его через организацию.
 
 </details>
 
@@ -902,6 +887,6 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 
 Спасибо, что дочитали до конца.
 
-Независимо от того, решите вы поддержать проекты или нет, я искренне благодарен каждому, кто ими пользуется. Именно вы — причина, по которой они продолжают развиваться. ❤️
+Я благодарен каждому, кто пользуется моими проектами, независимо от того, решит ли он поддержать их. Именно интерес пользователей помогает мне продолжать эту работу. ❤️
 
 <p align="right"><a href="#en-top">🇬🇧 Читать на английском ↑</a></p>
