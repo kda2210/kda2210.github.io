@@ -64,7 +64,7 @@ This page explains how they shape this site and the way I approach software.
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
 [![Support voluntary](https://img.shields.io/badge/Support-%E2%9D%A4%EF%B8%8F%20voluntary-blueviolet)](#en-support)
 [![Live demo](https://img.shields.io/badge/live-kda2210.github.io-8a2be2)](https://kda2210.github.io)
-![Zero dependencies](https://img.shields.io/badge/dependencies-0-success)
+![No libraries](https://img.shields.io/badge/libraries-0-success)
 
 ---
 
@@ -97,7 +97,7 @@ For small personal tools, a subscription often feels unnecessary. I want people 
 
 ### ✔️ Works offline
 
-I design my applications so their core features work without an internet connection. That removes the need for a server, improves privacy, and makes the apps usable in more places. *This page is a small exception on the first visit: it needs a connection to load the Google Fonts typeface and avatar image. Once your browser has cached them, the page works offline.*
+I design my applications so their core features work without an internet connection. That removes the need for a server, improves privacy, and makes the apps usable in more places. *This page is a small exception: it loads the Google Fonts typeface and the avatar image from external servers. Without a connection it still works, with a system serif font and a placeholder icon instead.*
 
 ### ✔️ Open Source from day one
 
@@ -112,7 +112,7 @@ I publish each project as open source from the start. You can inspect the code, 
 <a name="en-about"></a>
 ## 📖 About
 
-kda2210.github.io is my personal digital business card. It contains an avatar, a short description, and links for getting in touch. The page is a single static HTML file with no build step or external dependencies. It also has a few details that take more work than the file size suggests: a soft light that follows the cursor or finger and moves slowly when left alone, a card that reacts to the phone's orientation, and a few smaller touches.
+kda2210.github.io is my personal digital business card. It contains an avatar, a short description, and links for getting in touch. The page is a single static HTML file with no build step, frameworks, or libraries. It also has a few details that take more work than the file size suggests: a soft light that follows the cursor or finger and moves slowly when left alone, a card that reacts to the phone's orientation, and a few smaller touches.
 
 I made the page for my own use. I published it so others can see how it works and use the code as a reference if they find it helpful.
 
@@ -144,7 +144,7 @@ I made the page for my own use. I published it so others can see how it works an
 
 Live: **[kda2210.github.io](https://kda2210.github.io)**
 
-To run it locally, clone the repository and open `index.html` in a browser. There's nothing to install or build.
+To run it locally, clone or download the repository and open `index.html` in a browser. There's nothing to install or build.
 
 ---
 
@@ -183,7 +183,7 @@ Displays the owner's current local time.
 
 ### ♿ Respects `prefers-reduced-motion`
 
-Animations are disabled for visitors who have enabled this setting in their system preferences.
+If your system is set to reduce motion, the animations switch off.
 
 ---
 
@@ -193,9 +193,9 @@ Not telling. Find it yourself.
 
 ---
 
-### 🪶 Zero dependencies
+### 🪶 No libraries or frameworks
 
-The page uses HTML, CSS, and JavaScript in one file, with no external dependencies to install or update.
+The page uses HTML, CSS, and JavaScript in one file, with no libraries to install or update.
 
 <p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
 
@@ -207,12 +207,12 @@ The page uses HTML, CSS, and JavaScript in one file, with no external dependenci
 The page is built with HTML, CSS, and JavaScript, without frameworks or build tools. It uses a few browser APIs directly: the Web Audio API for sound and the Device Orientation API for the gyroscope. The animations use CSS custom properties and `@keyframes`.
 
 ```
-index.html              — the card itself (this page)
-supporters/index.html   — the shared Hall of Supporters page
-fioletovyj.jpeg          — background image
-docs/                     — screenshots used in this README
-LICENSE                   — MIT license (code only, see below)
-SECURITY.md               — how to report a security issue
+index.html             — the card itself (this page)
+supporters/index.html  — the shared Hall of Supporters page
+fioletovyj.jpeg        — background image
+docs/                  — screenshots used in this README
+LICENSE                — MIT license (code only, see below)
+SECURITY.md            — how to report a security issue
 ```
 
 ---
@@ -223,9 +223,10 @@ SECURITY.md               — how to report a security issue
 The code is open, so you can create your own version. The main things to change are:
 
 - the Telegram / email / VK / phone links
-- the avatar and background image
-- the timezone, in the `TIMEZONE` variable
+- the avatar (its URL is also used in `<head>`, for the icons and `og:image`) and the background image
+- the timezone in the `TIMEZONE` variable, and the city name in the clock tooltip
 - the details in the vCard generator
+- the meta tags in `<head>` (title, description, Open Graph, canonical) and the JSON-LD block
 - the tagline and the text underneath it
 
 ---
@@ -260,7 +261,7 @@ No — see the note in [License](#en-license). Swap them for your own, that's th
 <summary><b>Does it track or analyze visitors?</b></summary>
 <br>
 
-There are no analytics, cookies, or other visitor-tracking tools. The page is static and does not record who opens it.
+There are no analytics, cookies, or other visitor-tracking tools, and the page doesn't record who opens it. The only thing saved in your browser is your language choice. The font comes from Google Fonts and the avatar from GitHub, so those two requests go to their servers.
 
 </details>
 
@@ -379,6 +380,14 @@ Organizations — companies, foundations, employers, NGOs — sometimes want to 
 - **Sponsorship credit.** A contribution gets a static "Supported by [name]" line here and on the [Hall of Supporters](https://kda2210.github.io/supporters) — not a banner, not a pop-up, nothing shown inside the app itself.
 - **Organizational deployment.** If you want to roll this project out to your employees, members, or users, I can work out a license covering your organization. Each person still gets it free, exactly like everyone else — the organization is the one paying, not them.
 
+<details>
+<summary><b>Does "free" still apply if my organization is paying?</b></summary>
+<br>
+
+Yes. Organizational licensing pays for a deployment at scale — it never turns a feature on or off for anyone. Every individual gets the exact same free, full version whether they found it themselves or got it through an organization.
+
+</details>
+
 ### 🎯 Fund a specific feature
 
 Sponsor a concrete addition — a new language, a specific capability — and get named, permanent credit for it once it ships. It's released free to everyone regardless, same as everything else.
@@ -426,18 +435,6 @@ Want to suggest something? [Open an issue](https://github.com/kda2210/kda2210.gi
 ---
 
 -->
-
-<details>
-<summary><b>Does "free" still apply if my organization is paying?</b></summary>
-<br>
-
-Yes. Organizational licensing pays for a deployment at scale — it never turns a feature on or off for anyone. Every individual gets the exact same free, full version whether they found it themselves or got it through an organization.
-
-</details>
-
-<p align="right">(<a href="#en-top">⬆ back to top</a>)</p>
-
----
 
 ## 🌱 Thank you
 
@@ -508,7 +505,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 [![Открытый код](https://img.shields.io/badge/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%B4-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
 [![Поддержка добровольно](https://img.shields.io/badge/%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-%E2%9D%A4%EF%B8%8F%20%D0%B4%D0%BE%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE-blueviolet)](#ru-support)
 [![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-kda2210.github.io-8a2be2)](https://kda2210.github.io)
-![Ноль зависимостей](https://img.shields.io/badge/%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-0-success)
+![Без библиотек](https://img.shields.io/badge/%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B8-0-success)
 
 ---
 
@@ -541,7 +538,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 
 ### ✔️ Работа без интернета
 
-Основные возможности моих приложений работают без подключения к серверу. Это упрощает работу программы, помогает сохранить конфиденциальность и позволяет пользоваться ею в разных местах. *У этой страницы есть небольшое исключение: при первом открытии требуется интернет, чтобы загрузить шрифт Google Fonts и изображение аватара. После сохранения этих файлов в кэше браузера страница работает без сети.*
+Основные возможности моих приложений работают без подключения к серверу. Это упрощает работу программы, помогает сохранить конфиденциальность и позволяет пользоваться ею в разных местах. *У этой страницы есть небольшое исключение: шрифт Google Fonts и аватар загружаются с внешних серверов. Без подключения страница всё равно работает, но вместо них показываются системный шрифт с засечками и значок-заглушка.*
 
 ### ✔️ Открытый исходный код с самого начала
 
@@ -556,7 +553,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 <a name="ru-about"></a>
 ## 📖 О проекте
 
-kda2210.github.io — моя личная цифровая визитка. На ней есть аватар, короткое описание и способы связаться со мной. Вся страница размещена в одном статическом HTML-файле: без этапа сборки и сторонних зависимостей.
+kda2210.github.io — моя личная цифровая визитка. На ней есть аватар, короткое описание и способы связаться со мной. Вся страница размещена в одном статическом HTML-файле: без этапа сборки, фреймворков и библиотек.
 
 Несмотря на простую основу, в ней есть несколько дополнительных деталей. Мягкое световое пятно следует за курсором или пальцем, а когда его не перемещают — медленно движется само. Карточка реагирует на наклон телефона. Есть и другие небольшие элементы, которые редко встречаются на настолько простых страницах.
 
@@ -581,6 +578,8 @@ kda2210.github.io — моя личная цифровая визитка. На 
 
 </details>
 
+*Короткая GIF-анимация показала бы подсветку и наклон телефона лучше, чем статичный скриншот. Добавлю позже.*
+
 ---
 
 <a name="ru-try"></a>
@@ -588,7 +587,7 @@ kda2210.github.io — моя личная цифровая визитка. На 
 
 Сайт: **[kda2210.github.io](https://kda2210.github.io)**
 
-Чтобы открыть страницу на своём компьютере, скачайте копию репозитория и запустите `index.html` в браузере. Устанавливать дополнительные программы или собирать проект не нужно.
+Чтобы открыть страницу на своём компьютере, клонируйте или скачайте репозиторий и откройте `index.html` в браузере. Устанавливать и собирать ничего не нужно.
 
 ---
 
@@ -633,11 +632,11 @@ kda2210.github.io — моя личная цифровая визитка. На 
 
 ### 👀 Скрытая пасхалка
 
-Не буду раскрывать. Попробуйте найти сами.
+Не скажу. Найдите сами.
 
 ---
 
-### 🪶 Без сторонних зависимостей
+### 🪶 Без библиотек и фреймворков
 
 Вся страница написана на HTML, CSS и JavaScript и находится в одном файле. Ничего дополнительно устанавливать, собирать или обновлять не нужно.
 
@@ -651,12 +650,12 @@ kda2210.github.io — моя личная цифровая визитка. На 
 Страница написана на HTML, CSS и JavaScript — без фреймворков и инструментов сборки. Напрямую используются несколько API браузера: Web Audio API для звука и Device Orientation API для работы с гироскопом. Для анимаций применяются пользовательские свойства CSS и `@keyframes`.
 
 ```
-index.html              — сама визитка (эта страница)
-supporters/index.html   — общая страница «Стена поддержавших»
-fioletovyj.jpeg          — фоновое изображение
-docs/                     — папка со скриншотами для README.md
-LICENSE                   — лицензия MIT (только на код, см. ниже)
-SECURITY.md               — инструкция по сообщению о проблемах безопасности
+index.html             — сама визитка (эта страница)
+supporters/index.html  — общая страница «Стена поддержавших»
+fioletovyj.jpeg        — фоновое изображение
+docs/                  — папка со скриншотами для README.md
+LICENSE                — лицензия MIT (только на код, см. ниже)
+SECURITY.md            — инструкция по сообщению о проблемах безопасности
 ```
 
 ---
@@ -667,9 +666,10 @@ SECURITY.md               — инструкция по сообщению о п
 Код открыт — вы можете создать копию проекта и изменить её под себя. В первую очередь стоит заменить:
 
 - ссылки на Telegram, почту, VK и номер телефона;
-- аватар и фоновое изображение;
-- часовой пояс в переменной `TIMEZONE`;
+- аватар (его адрес повторяется в `<head>`: значки и `og:image`) и фоновое изображение;
+- часовой пояс в переменной `TIMEZONE` и название города во всплывающей подсказке часов;
 - данные, которые используются при создании файла vCard;
+- мета-теги в `<head>` (заголовок, описание, Open Graph, canonical) и блок JSON-LD;
 - короткую фразу о владельце и текст под ней.
 
 ---
@@ -704,7 +704,7 @@ SECURITY.md               — инструкция по сообщению о п
 <summary><b>Страница собирает сведения о посетителях?</b></summary>
 <br>
 
-Нет. Здесь нет аналитики, файлов cookie и других средств отслеживания. Страница статическая и не записывает, кто её открывает.
+Нет. Здесь нет аналитики, файлов cookie и других средств отслеживания, страница не записывает, кто её открывает. В браузере сохраняется только выбранный язык. Шрифт приходит с Google Fonts, а аватар с GitHub, так что эти два запроса уходят на их серверы.
 
 </details>
 
@@ -742,7 +742,7 @@ SECURITY.md               — инструкция по сообщению о п
 <a name="ru-support"></a>
 ## ❤️ Добровольная поддержка
 
-Добровольные взносы помогают мне уделять больше времени развитию существующих приложений и работе над новыми. Выберите удобный способ. Сумму выбираете вы, и «слишком маленькой» суммы не бывает. Поддержка не открывает дополнительных возможностей и не меняет работу приложений.
+Добровольные взносы помогают мне уделять больше времени развитию существующих приложений и работе над новыми. Выберите удобный способ. Сумму выбираете вы, и слишком маленькой она не бывает. Поддержка не открывает дополнительных возможностей и не меняет работу приложений.
 
 <details>
 <summary><b>💳 Показать все способы поддержки</b></summary>
@@ -823,6 +823,14 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 - **Упоминание спонсора.** После взноса здесь и на странице [«Стена поддержавших»](https://kda2210.github.io/supporters) появляется строка «Поддержано [название]». Это будет обычный текст — без баннеров, всплывающих окон и рекламы внутри приложения.
 - **Использование в организации.** Если вы хотите распространить проект среди сотрудников, участников или пользователей своей организации, можно отдельно обсудить лицензию для организации. Каждый человек по-прежнему будет пользоваться бесплатной полной версией, оплату берёт на себя организация.
 
+<details>
+<summary><b>Остаётся ли проект бесплатным, если платит организация?</b></summary>
+<br>
+
+Да. Организационная лицензия нужна для распространения проекта среди большого числа пользователей. Она не включает и не отключает отдельные возможности. Каждый человек получает одну и ту же полную бесплатную версию — независимо от того, нашёл он проект самостоятельно или получил его через организацию.
+
+</details>
+
 ### 🎯 Финансирование отдельной функции
 
 Можно профинансировать конкретное улучшение — например, добавить новый язык или отдельную возможность. После выпуска ваше участие будет отмечено в проекте. Сама функция при этом останется бесплатной для всех.
@@ -870,18 +878,6 @@ GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ---
 
 -->
-
-<details>
-<summary><b>Остаётся ли проект бесплатным, если платит организация?</b></summary>
-<br>
-
-Да. Организационная лицензия нужна для распространения проекта среди большого числа пользователей. Она не включает и не отключает отдельные возможности. Каждый человек получает одну и ту же полную бесплатную версию — независимо от того, нашёл он проект самостоятельно или получил его через организацию.
-
-</details>
-
-<p align="right">(<a href="#ru-top">⬆ наверх</a>)</p>
-
----
 
 ## 🌱 Спасибо
 
