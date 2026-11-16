@@ -797,7 +797,7 @@ r3e3iyezjaGAsB64aNEfGDgrPYmachHZyc
 GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ```
 
-**Другой способ**
+**Другой способ ?**
 
 ✉️ kda2210@duck.com
 
