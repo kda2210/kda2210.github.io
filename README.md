@@ -60,7 +60,7 @@ These are the principles I use when building my projects.
 
 This page explains how they shape this site and the way I approach software.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
 [![Support voluntary](https://img.shields.io/badge/Support-%E2%9D%A4%EF%B8%8F%20voluntary-blueviolet)](#en-support)
 [![Live demo](https://img.shields.io/badge/live-kda2210.github.io-8a2be2)](https://kda2210.github.io)
@@ -209,7 +209,8 @@ index.html             — the card itself (this page)
 supporters/index.html  — the shared Hall of Supporters page
 fioletovyj.jpeg        — background image
 docs/                  — screenshots used in this README
-LICENSE                — MIT license (code only, see below)
+LICENSE                — GNU GPL v3 or later (source code)
+TRADEMARKS.md          — project name, logo and icon policy
 SECURITY.md            — how to report a security issue
 ```
 
@@ -278,11 +279,11 @@ There are no analytics, cookies, or other visitor-tracking tools, and the page d
 <a name="en-license"></a>
 ## 📄 License
 
-Released under the MIT License — for the code.
+This project is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See [LICENSE](LICENSE).
 
-Use the code, study it, and build your own version.
+The project name **kda2210.github.io**, its logo and icon are not covered by the GPL. Their use is governed by the [Trademark Policy](TRADEMARKS.md).
 
-**One exception:** the personal content in this repository — the photo, phone number, email, and social links — isn't covered by that license. That's not code, it's one specific person's contact information, and there's no reason for anyone but me to reuse it. If you fork this, swap it all out for your own — see [Want to build your own?](#en-fork).
+The personal content in this repository — including the photo, phone number, email address and social links — is not part of the licensed source code and is not provided for reuse. If you fork this project, replace these materials with your own. See [Want to build your own?](#en-fork).
 
 ---
 
@@ -356,7 +357,7 @@ r3e3iyezjaGAsB64aNEfGDgrPYmachHZyc
 GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ```
 
-**Prefer another method?**
+**Prefer another method ?**
 
 ✉️ kda2210@duck.com
 
@@ -499,7 +500,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 
 Эти принципы лежат в основе моих проектов. На этой странице я рассказываю о самой визитке и о том, почему выбрал именно такой подход.
 
-[![Лицензия: MIT](https://img.shields.io/badge/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Лицензия: GPL-3.0-or-later](https://img.shields.io/badge/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![Открытый код](https://img.shields.io/badge/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%B4-%E2%9D%A4%EF%B8%8F-red)](https://github.com/kda2210)
 [![Поддержка добровольно](https://img.shields.io/badge/%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-%E2%9D%A4%EF%B8%8F%20%D0%B4%D0%BE%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE-blueviolet)](#ru-support)
 [![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-kda2210.github.io-8a2be2)](https://kda2210.github.io)
@@ -650,7 +651,8 @@ index.html             — сама визитка (эта страница)
 supporters/index.html  — общая страница «Стена поддержавших»
 fioletovyj.jpeg        — фоновое изображение
 docs/                  — папка со скриншотами для README.md
-LICENSE                — лицензия MIT (только на код, см. ниже)
+LICENSE                — GNU GPL версии 3 или более поздней (исходный код)
+TRADEMARKS.md          — правила использования названия, логотипа и значка проекта
 SECURITY.md            — инструкция по сообщению о проблемах безопасности
 ```
 
@@ -719,11 +721,11 @@ SECURITY.md            — инструкция по сообщению о пр�
 <a name="ru-license"></a>
 ## 📄 Лицензия
 
-Исходный код распространяется по лицензии MIT.
+Исходный код проекта распространяется на условиях GNU General Public License версии 3 либо (по вашему выбору) любой более поздней версии. См. [LICENSE](LICENSE). Полный текст лицензии приведён на английском языке, русский перевод GPL является неофициальным и не заменяет оригинал.
 
-Используйте его, изучайте и создавайте на его основе собственные проекты.
+Название проекта **kda2210.github.io**, его логотип и значок не охватываются GPL. Их использование регулируется [Политикой использования торговой марки](TRADEMARKS.md).
 
-**Важное исключение:** лицензия не распространяется на личные материалы в этом репозитории — фотографию, номер телефона, адрес электронной почты и ссылки на социальные сети. Это контактные данные конкретного человека, а не часть исходного кода. При создании своей версии замените их собственными. Подробнее — в разделе [«Как создать свою версию»](#ru-fork).
+Личные материалы в этом репозитории — фотография, номер телефона, адрес электронной почты и ссылки на социальные сети — не входят в лицензируемый исходный код и не предоставляются для повторного использования. При создании своей версии замените их собственными. Подробнее — в разделе [«Как создать свою версию»](#ru-fork).
 
 ---
 
