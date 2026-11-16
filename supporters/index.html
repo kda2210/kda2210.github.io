@@ -19,9 +19,10 @@
 <meta property="og:description" content="A shared record of everyone who has chosen to support kda2210's open-source projects.">
 <meta name="twitter:card" content="summary">
 
+<!-- Шрифты подключаются без блокировки отрисовки: если Google Fonts недоступен, страница всё равно откроется -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
   :root{
     --paper:#efeee8;
@@ -69,8 +70,9 @@
   .langtoggle button{
     background:none;border:1px solid var(--line);
     padding:5px 10px;font:inherit;font-family:"IBM Plex Sans",sans-serif;
-    color:var(--ink-soft);cursor:pointer;
+    color:var(--ink-soft);cursor:pointer;position:relative;
   }
+  .langtoggle button::after{content:"";position:absolute;inset:-7px 0;} /* больше область нажатия, вид не меняется */
   .langtoggle button[aria-pressed="true"]{
     color:var(--paper);background:var(--ink);border-color:var(--ink);
   }
@@ -78,7 +80,6 @@
   .langtoggle button:last-child{border-radius:0 3px 3px 0;border-left:none;}
 
   .hero{padding:56px 0 40px;}
-  .hero.i18n{ /* still needs the show/hide rule above; this just adds spacing */ }
   .seal{display:block;margin-bottom:18px;}
   h1{
     font-family:"Newsreader",serif;
@@ -143,7 +144,7 @@
     text-decoration:none;
     border-radius:2px;
   }
-  .cta:hover{background:var(--seal);}
+  @media (hover:hover){ .cta:hover{background:var(--seal);} }
 
   footer{border-top:1px solid var(--line);padding:36px 0 56px;}
   footer p{color:var(--ink-soft);font-size:14px;margin:0 0 6px;}
@@ -219,20 +220,20 @@
            выглядел открытым для следующей записи. Нумерация — автоматическая.
       -->
       <div class="i18n" lang="en">
-        <ol class="ledger-list">
+        <ol class="ledger-list" role="list">
           <li class="open">This line is open.</li>
           <li class="open">This line is open.</li>
           <li class="open">This line is open.</li>
         </ol>
-        <a class="cta" id="mail-partner-en" href="#">Email about a partnership</a>
+        <a class="cta" id="mail-partner-en" href="mailto:kda2210@duck.com">Email about a partnership</a>
       </div>
       <div class="i18n" lang="ru">
-        <ol class="ledger-list">
+        <ol class="ledger-list" role="list">
           <li class="open">Эта строка свободна.</li>
           <li class="open">Эта строка свободна.</li>
           <li class="open">Эта строка свободна.</li>
         </ol>
-        <a class="cta" id="mail-partner-ru" href="#">Написать о партнёрстве</a>
+        <a class="cta" id="mail-partner-ru" href="mailto:kda2210@duck.com">Написать о партнёрстве</a>
       </div>
 
     </div>
@@ -252,22 +253,22 @@
 
       <!-- Тот же принцип: занять "open"-строку именем, добавить новую пустую в конец. -->
       <div class="i18n" lang="en">
-        <ol class="ledger-list">
+        <ol class="ledger-list" role="list">
           <li class="open">This line is open.</li>
           <li class="open">This line is open.</li>
           <li class="open">This line is open.</li>
           <li class="open">This line is open.</li>
         </ol>
-        <a class="cta" id="mail-supporter-en" href="#">Add my name</a>
+        <a class="cta" id="mail-supporter-en" href="mailto:kda2210@duck.com">Add my name</a>
       </div>
       <div class="i18n" lang="ru">
-        <ol class="ledger-list">
+        <ol class="ledger-list" role="list">
           <li class="open">Эта строка свободна.</li>
           <li class="open">Эта строка свободна.</li>
           <li class="open">Эта строка свободна.</li>
           <li class="open">Эта строка свободна.</li>
         </ol>
-        <a class="cta" id="mail-supporter-ru" href="#">Добавить своё имя</a>
+        <a class="cta" id="mail-supporter-ru" href="mailto:kda2210@duck.com">Добавить своё имя</a>
       </div>
 
     </div>
@@ -294,26 +295,13 @@
     var btnRu = document.getElementById('btn-ru');
 
     var LANG_KEY = 'lang';
-
-    function getStoredLang(){
-      var stored = localStorage.getItem(LANG_KEY);
-      return (stored === 'ru' || stored === 'en') ? stored : 'ru';
-    }
-
-    function setLang(lang){
-      root.setAttribute('data-lang', lang);
-      root.setAttribute('lang', lang);
-      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
-      btnRu.setAttribute('aria-pressed', String(lang === 'ru'));
-      localStorage.setItem(LANG_KEY, lang);
-    }
-    btnEn.addEventListener('click', function(){ setLang('en'); });
-    btnRu.addEventListener('click', function(){ setLang('ru'); });
-
-    // Подхватываем язык, выбранный ранее на главной странице (тот же ключ localStorage).
-    setLang(getStoredLang());
+    var TITLES = {
+      en: 'Hall of Supporters \u2014 kda2210',
+      ru: 'Стена поддержавших \u2014 kda2210'
+    };
 
     // Build mailto links without hand-encoding Cyrillic.
+    // В HTML у этих ссылок уже есть простой mailto, он работает и без JS; здесь добавляются тема и текст письма.
     var EMAIL = 'kda2210@duck.com';
 
     function mailto(subject, body){
@@ -338,6 +326,33 @@
       'Стена поддержавших',
       'Ник для списка: \n(необязательно) Какой проект поддержали: \n(необязательно) Ссылка рядом с именем: '
     );
+
+    // localStorage может быть недоступен (заблокированы данные сайтов), поэтому всегда в try/catch.
+    function getStoredLang(){
+      try {
+        var stored = localStorage.getItem(LANG_KEY);
+        if (stored === 'ru' || stored === 'en') return stored;
+      } catch (e) {}
+      return 'ru';
+    }
+
+    function saveLang(lang){
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    }
+
+    function setLang(lang){
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+      btnRu.setAttribute('aria-pressed', String(lang === 'ru'));
+      document.title = TITLES[lang];
+      saveLang(lang);
+    }
+    btnEn.addEventListener('click', function(){ setLang('en'); });
+    btnRu.addEventListener('click', function(){ setLang('ru'); });
+
+    // Подхватываем язык, выбранный ранее на главной странице (тот же ключ localStorage).
+    setLang(getStoredLang());
   })();
 </script>
 
