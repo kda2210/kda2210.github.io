@@ -77,7 +77,7 @@ I want the software I build to remain accessible to everyone. I follow the same 
 | 💸 | **Free** | You never pay to use it. |
 | 🚫 | **No ads** | Nothing competes for your attention. |
 | 🔁 | **No subscriptions** | Install once, use it for as long as you like. |
-| 📴 | **Works offline** | No server — nothing leaves your device. |
+| 📴 | **Works offline** | Core features work without an internet connection. |
 | 🔓 | **Open Source** | Nothing hidden. Read it, verify it, build on it. |
 
 <details>
@@ -134,8 +134,6 @@ I made the page for my own use. I published it so others can see how it works an
 <p align="center"><sub>Click the screenshot to open it full size</sub></p>
 
 </details>
-
-*A short GIF would show the ambient light and the phone-tilt effect better than a still image. I'll add one later.*
 
 ---
 
@@ -358,7 +356,7 @@ r3e3iyezjaGAsB64aNEfGDgrPYmachHZyc
 GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ```
 
-**Prefer another method ?**
+**Prefer another method?**
 
 ✉️ kda2210@duck.com
 
@@ -518,7 +516,7 @@ Whether or not you decide to support these projects, I'm sincerely grateful to e
 | 💸 | **Бесплатно** | За использование не нужно платить. |
 | 🚫 | **Без рекламы** | Ничто не отвлекает от работы с приложением. |
 | 🔁 | **Без подписок** | Установили один раз и пользуетесь сколько угодно. |
-| 📴 | **Работа без интернета** | Приложению не нужен сервер, данные не покидают устройство. |
+| 📴 | **Работа без интернета** | Основные возможности работают без подключения к интернету. |
 | 🔓 | **Открытый исходный код** | Код доступен для просмотра, проверки и доработки. |
 
 <details>
@@ -577,8 +575,6 @@ kda2210.github.io — моя личная цифровая визитка. На 
 <p align="center"><sub>Нажмите на изображение, чтобы открыть его полностью</sub></p>
 
 </details>
-
-*Короткая GIF-анимация показала бы подсветку и наклон телефона лучше, чем статичный скриншот. Добавлю позже.*
 
 ---
 
@@ -669,7 +665,7 @@ SECURITY.md            — инструкция по сообщению о пр�
 - аватар (его адрес повторяется в `<head>`: значки и `og:image`) и фоновое изображение;
 - часовой пояс в переменной `TIMEZONE` и название города во всплывающей подсказке часов;
 - данные, которые используются при создании файла vCard;
-- мета-теги в `<head>` (заголовок, описание, Open Graph, canonical) и блок JSON-LD;
+- мета-теги в `<head>` (заголовок, описание, Open Graph, канонический адрес) и блок JSON-LD;
 - короткую фразу о владельце и текст под ней.
 
 ---
@@ -677,7 +673,7 @@ SECURITY.md            — инструкция по сообщению о пр�
 <a name="ru-security"></a>
 ## 🔐 Безопасность
 
-Если вы нашли настоящую проблему безопасности, действуйте по инструкции в [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md) и не пишите о ней в публичном issue.
+Если вы нашли настоящую проблему безопасности, действуйте по инструкции в [SECURITY.md](https://github.com/kda2210/kda2210.github.io/blob/main/SECURITY.md) и не сообщайте о ней в открытом обсуждении проекта.
 
 ---
 
@@ -801,7 +797,7 @@ r3e3iyezjaGAsB64aNEfGDgrPYmachHZyc
 GBVZ3TMMJLWJ7RUCM2X6QQZADWHFLHEGDDVOT3TPLVLJFQOCEGVLUCU4
 ```
 
-**Другой способ ?**
+**Другой способ**
 
 ✉️ kda2210@duck.com
 
