@@ -6,7 +6,7 @@ Email instead: **kda2210@duck.com**
 
 Please include a description of the issue and, if possible, steps to reproduce it. I'll acknowledge your report within a few days.
 
-Things like "this could be minified" or "you could use a bundler" aren't security issues — feel free to raise those as a normal public issue or PR instead.
+Things like "this could be minified" or "you could use a bundler" aren't security issues — feel free to raise those as a normal public issue or pull request instead.
 
 ---
 
@@ -18,4 +18,4 @@ Things like "this could be minified" or "you could use a bundler" aren't securit
 
 Опишите проблему и, если возможно, шаги для воспроизведения. Я подтвержу получение в течение нескольких дней.
 
-Вещи вроде «это можно было бы минифицировать» или «стоило бы использовать сборщик» — не проблемы безопасности, для них подойдёт обычный публичный issue или PR.
+Вещи вроде «это можно было бы минифицировать» или «стоило бы использовать сборщик» — не проблемы безопасности, для них подойдёт обычный публичный issue или pull request.

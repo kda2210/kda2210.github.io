@@ -3,8 +3,6 @@
 <a name="en-top"></a>
 # Trademark Policy
 
-> **Draft for legal review.** Trademark law differs between countries. Registering a name and logo may provide stronger protection than a policy file alone. Have this document reviewed by a lawyer before publication. This policy file by itself does not create a registered trademark.
-
 **kda2210.github.io**
 
 The source code of **kda2210.github.io** is free software, licensed under the GNU General Public License v3.0 or later (see [LICENSE](LICENSE)). The GPL covers the code. It does **not** grant any rights to the project's name, logo and icon (together, the "Marks"), which are owned by kda2210 ("we"). Whatever copyright license applies to the logo and icon files, using them to identify a product or project is governed by this policy.
@@ -48,8 +46,6 @@ This policy may change over time; the version in the main branch applies. The Ru
 
 <a name="ru-top"></a>
 # Политика использования торговой марки
-
-> **Черновик для юридической проверки.** Законодательство о торговых марках различается по странам. Регистрация названия и логотипа может обеспечить более сильную защиту, чем один файл с политикой. Перед публикацией покажите этот документ юристу. Сам по себе этот файл не создаёт зарегистрированную торговую марку.
 
 **kda2210.github.io**
 
