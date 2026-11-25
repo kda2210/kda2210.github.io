@@ -127,8 +127,8 @@ I made the page for my own use. I published it so others can see how it works an
 <br>
 
 <p align="center">
-  <a href="docs/Screenshot_20260909-142548.webp" target="_blank">
-    <img src="docs/Screenshot_20260909-142548.webp" width="220" alt="Card preview">
+  <a href="docs/Screenshot_en.jpg" target="_blank">
+    <img src="docs/Screenshot_en.jpg" width="220" alt="Card preview">
   </a>
 </p>
 
@@ -600,8 +600,8 @@ kda2210.github.io — моя личная цифровая визитка. На 
 <br>
 
 <p align="center">
-  <a href="docs/Screenshot_20260909-142540.webp" target="_blank">
-    <img src="docs/Screenshot_20260909-142540.webp" width="220" alt="Предварительный вид визитки">
+  <a href="docs/Screenshot_ru.jpg" target="_blank">
+    <img src="docs/Screenshot_ru.jpg" width="220" alt="Предварительный вид визитки">
   </a>
 </p>
 
